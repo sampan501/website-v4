@@ -16,9 +16,9 @@
 
 // EXAMPLE: alternative post title color
 // This is useful when you're using the custom color scheme.
-// .content { .list h2 a, header h1, header h1 a { color: var(--link-color); } }
-// .external span { background: var(--link-color); }
 .content { a { color: var(--link-color); } }
+.external span { background: var(--link-color); }
+// .content { a { color: var(--link-color); } }
 
 // EXAMPLE: Custom typography for Chinese Traditional
 // :root {
@@ -33,6 +33,14 @@
   --link-color-l: 35%;
   --code-color-h: calc(var(--link-color-h) + 10);
   --code-color-s: calc(var(--link-color-s) * .2 + 40%);
+}
+
+.list {
+  h1 {
+    @media (max-width: $breakpoint-sm) {
+      overflow-wrap: break-word;
+    }
+  }
 }
 
 .content {
@@ -62,6 +70,10 @@ small {
   
   li {
     display: flex;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    display: block;
   }
 }
 
