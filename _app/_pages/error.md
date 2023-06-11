@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Error‽
+title: Error?
 permalink: /404.html
-desc: 錯誤・エラー・Oops
+desc: Oops
 category: home
 hidden: true
 css: |

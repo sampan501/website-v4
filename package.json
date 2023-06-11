@@ -1,19 +1,19 @@
 {
-  "name": "almace-scaffolding",
+  "name": "sampan.me",
   "version": "2.0.24",
-  "description": "Almace Scaffolding, a super-fast Jekyll framework fighting against the website obesity.",
-  "author": "Tunghsiao Liu",
-  "homepage": "https://sparanoid.com/lab/amsf/",
+  "description": "Personal website for Sambit Panda.",
+  "author": "Sambit Panda",
+  "homepage": "https://sampan.me",
   "main": "Gruntfile.coffee",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sparanoid/almace-scaffolding.git"
+    "url": "git+https://github.com/sampan501/sampan.me.git"
   },
   "bugs": {
-    "url": "https://github.com/sparanoid/almace-scaffolding/issues"
+    "url": "https://github.com/sampan501/sampan.me/issues"
   },
   "license": "MIT",
   "keywords": [

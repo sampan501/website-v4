@@ -25,11 +25,30 @@
 <section class="list">
   <h1>
     <!-- Item title -->
-    <a href="{{ post.url | relative_url }}" {% if site.data.curtana.colorful_list %}{{ post_link_color }}{% endif %}>{{ amsf_page_title }}</a>
+    {% if post.external %}
+      <a href="{{ post.external }}">{{ amsf_page_title }}</a>
+    {% else %}
+      <a href="{{ post.url | relative_url }}" {% if site.data.curtana.colorful_list %}{{ post_link_color }}{% endif %}>{{ amsf_page_title }}</a>
+    {% endif %}
 
     <!-- External link indicator -->
     {% if post.link %}
       <a href="{{ post.link }}" class=external><span class="dot" {% if site.data.curtana.colorful_list %}{{ post_link_bg }}{% endif %}> </span></a>
     {% endif %}
   </h1>
+
+  <small>
+    {% if post.category == "research" %}
+      by {{ post.authors }}<br />
+      {% if post.journal %}
+        {% assign paper_link = post.links[0] | split: ": " %}
+        in <a href="{{ paper_link | slice: 1 }}" class=external>{{ post.journal }}</a>
+      {% endif %}
+      on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    {% endif %}
+  </small>
+
+  {% if post.desc %}
+    <small>{{ post.desc }}</small>
+  {% endif %}
 </section>

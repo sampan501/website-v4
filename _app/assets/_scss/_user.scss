@@ -18,6 +18,7 @@
 // This is useful when you're using the custom color scheme.
 // .content { .list h2 a, header h1, header h1 a { color: var(--link-color); } }
 // .external span { background: var(--link-color); }
+.content { a { color: var(--link-color); } }
 
 // EXAMPLE: Custom typography for Chinese Traditional
 // :root {
@@ -27,11 +28,44 @@
 
 // EXAMPLE: amsf.github.io custom appearance
 :root {
+  --link-color-h: 199;
+  --link-color-s: 100%;
+  --link-color-l: 35%;
   --code-color-h: calc(var(--link-color-h) + 10);
   --code-color-s: calc(var(--link-color-s) * .2 + 40%);
 }
 
-.content .sub-title {
-  font-size: 108%;
-  opacity: .8;
+.content {
+  .sub-title {
+    font-size: 108%;
+    opacity: .8;
+  }
+}
+
+small {
+  display: block;
+  margin-top: 1.5vmin;
+
+  &:last-of-type {
+    margin-bottom: 5vmin;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  
+  ul {        
+    display: flex;
+    align-items: center;
+  }
+  
+  li {
+    display: flex;
+  }
+}
+
+.footer {
+  text-align: center;
+  text-transform: none;
 }

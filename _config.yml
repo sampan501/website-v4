@@ -8,7 +8,7 @@
 #
 source:         _app
 destination:    _site
-timezone:       America/Los_Angeles
+timezone:       America/New_York
 permalink:      /:title.html
 markdown:       kramdown
 highlighter:    rouge
@@ -66,7 +66,7 @@ dev:            false
 # Site name
 #
 # Default:      Almace Scaffolding
-name:           Almace Scaffolding
+name:           Sambit Panda
 
 # Site short name
 #
@@ -82,7 +82,7 @@ name:           Almace Scaffolding
 # - name_short: Sparanoid
 #
 # Default:      AMSF
-name_short:     AMSF
+name_short:     SP
 
 # Site description
 #
@@ -99,7 +99,7 @@ description:    Super-fast Jekyll framework
 # `/my-project`, without trailing slash.
 #
 # Default:      ""
-baseurl:        /lab/amsf
+baseurl:        ""
 
 # Flatten base
 #
@@ -129,7 +129,7 @@ feed:           /feed.xml
 # URLs for these fields
 #
 # Default:      https://sparanoid.com
-url:            https://sparanoid.com
+url:            https://sampan.me
 
 # Media assets URL
 #
@@ -141,7 +141,7 @@ url:            https://sparanoid.com
 # grabs the first image of your post as post featured image.
 #
 # Default:      https://d349cztnlupsuf.cloudfront.net
-file:           https://d349cztnlupsuf.cloudfront.net
+file:           https://d1mfybxdl6x0wm.cloudfront.net
 
 # Download files URL
 #
@@ -152,7 +152,7 @@ file:           https://d349cztnlupsuf.cloudfront.net
 # download files. That's it. Remove or ignore this if you don't need it.
 #
 # Default:      https://d1bmx7s6749k4k.cloudfront.net
-download:       https://d1bmx7s6749k4k.cloudfront.net
+# download:       https://d1bmx7s6749k4k.cloudfront.net
 
 # Colors
 #
@@ -176,7 +176,7 @@ google_analytics:
   url:          https://www.google-analytics.com/analytics.js
 
 # Site Twitter account handle
-twitter:        sparanoid
+twitter:        bitapanda
 
 # Twitter Cards large images
 #
@@ -212,7 +212,7 @@ rss_excerpt:    false
 # Show or hide generator credits, require theme support
 #
 # Default:      true
-credits:        true
+credits:        false
 
 # Custom records in robots.txt
 #

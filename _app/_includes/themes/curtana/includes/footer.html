@@ -2,8 +2,6 @@
 {% unless page.permalink == '/' and site.data.curtana.clean_homepage %}
   <footer class="footer">
     <ul>
-      <li><a href="{{ '/' | relative_url }}">{{ amsf_site_name }}</a></li>
-
       {% if site.credits %}
         <li>
           <a href="https://sparanoid.com/lab/amsf/" title="Almace Scaffolding with theme {{ site.data.curtana.meta.name }}">AMSF</a>
@@ -19,6 +17,8 @@
         </li>
       {% endfor %}
     </ul>
+    <br />
+    <p>© 2019 - {{ 'now' | date: "%Y" }} Sambit Panda</p>
   </footer>
 {% endunless %}
 

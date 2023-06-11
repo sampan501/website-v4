@@ -1,0 +1,16 @@
+---
+layout: page
+title: Research
+permalink: /research/
+desc: Some stuff I've investigated. A full list of my papers is also available <a href="https://scholar.google.com/citations?user=-V3CmPoAAAAJ&hl=en">on Google Scholar</a>.
+---
+
+<h2>Papers</h2>
+{% for post in site.tags.articles %}
+  {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
+{% endfor %}
+
+<h2>Misc</h2>
+{% for post in site.tags.other %}
+  {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
+{% endfor %}

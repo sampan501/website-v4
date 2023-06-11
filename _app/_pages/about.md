@@ -1,21 +1,31 @@
 ---
 layout: page
-title: About
+title: About Sambit
 permalink: /about/
-desc: 示例頁面・サンプルページ・Example Page
+desc: Hi, my name is Sambit &#128075;. I develop novel approaches to analyze data and use them to answer interesting biomedical problems. You can learn more about the things I have done professionally on my <a href="/assets/pdf/cv.pdf">CV</a>.
 ---
 
-This is an example About page.
+![Sambit eating an apple at SfN](../logo.jpg){: .no-lightense}
 
-Sparanoid is a design studio operated by Tunghsiao Liu. You can ping me on [Twitter](https://twitter.com/tunghsiao) or send correspondence to [t@sparanoid.com](mailto:t@sparanoid.com).
+I have a wide array of experience, from using electrochemistry to understand neural systems at the
+[Sombers Lab](https://www.somberslab.org/) in my undergrad at
+[NC State](https://www.bme.ncsu.edu/) and to building tools that enable better data analysis
+at [NeuroData](https://neurodata.io/) at [Johns Hopkins](https://www.bme.jhu.edu/)
+via a [NIH Fellowship](https://researchtraining.nih.gov/programs/training-grants/T32-a)
+These opportunities allowed me the pleasure to work on a wide variety of interesting and meaningful projects on a
+daily basis.
 
-## Colophon
+When I'm not doing work, I like to read books and go on hikes!
 
-[AMSF](https://sparanoid.com/lab/amsf/) ([Source](https://github.com/sparanoid/sparanoid.com)) -
-[GitHub](https://github.com/) -
-[CloudFront](https://aws.amazon.com/cloudfront/) -
-[Textmate](https://macromates.com/)
+## Research Interests
 
-All posts are &copy; Sparanoid, Inc., all rights reserved.
+* Causal Inference
+* Hypothesis Testing
+* Neuroscience
+* Genomics
 
-*[AMSF]: Almace Scaffolding
+## Education
+
+* Ph.D. in [Biomedical Engineeering](https://www.bme.jhu.edu/), Johns Hopkins
+* M.S.E. in [Biomedical Engineeering](https://www.bme.jhu.edu/), Johns Hopkins
+* B.S. in [Biomedical Engineeering](http://catalog.ncsu.edu/undergraduate/engineering/biomedical/) & [Biology](https://bio.sciences.ncsu.edu/),  NC State
