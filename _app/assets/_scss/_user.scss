@@ -69,6 +69,18 @@ small {
     display: flex;
   }
 
+  .home {
+    a {
+      padding: .5em var(--nav-item-space);
+
+      &:hover,
+      &:focus {
+        color: var(--link-color);
+        text-decoration: none;
+      }
+    }
+  }
+
   @media (max-width: $breakpoint-xs) {
     display: block;
   }
