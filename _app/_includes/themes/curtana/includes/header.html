@@ -1,6 +1,6 @@
 <!-- Main navigation with current page / categoriy highlighted -->
 <nav class="navigation">
-  <a href="/">{{ amsf_site_name }}</a>
+  <div class="home"><a href="/">{{ amsf_site_name }}</a></div>
   <ul>
     {% for item in site.data.header %}
       {%- include amsf/relative_url url=item.url -%}
