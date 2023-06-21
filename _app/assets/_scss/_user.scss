@@ -57,20 +57,13 @@ small {
 }
 
 .navigation {
-  display: flex;
-  justify-content: space-between;
-  
   ul {        
-    display: flex;
-    align-items: center;
-  }
-  
-  li {
-    display: flex;
+    float: right;
   }
 
   .home {
     display: inline-block;
+    float: left;
 
     a {
       padding: .5em var(--nav-item-space);
