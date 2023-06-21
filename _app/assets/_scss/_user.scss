@@ -70,7 +70,7 @@ small {
   }
 
   .home {
-    display: flex;
+    display: inline-block;
 
     a {
       padding: .5em var(--nav-item-space);
