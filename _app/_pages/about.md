@@ -9,8 +9,7 @@ desc: Hi, my name is Sambit &#128075;. I develop novel approaches to analyze dat
 <picture>
   <source srcset="../logo.avif" type="image/avif">
   <source srcset="../logo.webp" type="image/webp">
-  <img src="../logo.jpg" alt="Sambit eating an apple at SfN." 
-    width="2048" height="1157" class="no-lightense">
+  <img src="../logo.jpg" alt="Sambit eating an apple at SfN." class="no-lightense">
 </picture>
 </p>
 
