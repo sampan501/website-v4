@@ -5,7 +5,14 @@ permalink: /about/
 desc: Hi, my name is Sambit &#128075;. I develop novel approaches to analyze data and use them to answer interesting biomedical problems. You can learn more about the things I have done professionally on my <a href="/assets/pdf/cv.pdf">CV</a>.
 ---
 
-![Sambit eating an apple at SfN](../logo.jpg){: .no-lightense}
+<p>
+<picture>
+  <source srcset="../logo.avif" type="image/avif">
+  <source srcset="../logo.webp" type="image/webp">
+  <img src="../logo.jpg" alt="Sambit eating an apple at SfN." 
+    width="300" height="200" class="no-lightense">
+</picture>
+</p>
 
 I have a wide array of experience, from using electrochemistry to understand neural systems at the
 [Sombers Lab](https://www.somberslab.org/) in my undergrad at
