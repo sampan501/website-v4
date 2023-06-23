@@ -42,7 +42,7 @@
       by {{ post.authors }}<br />
       {% if post.journal %}
         {% assign paper_link = post.links[0] | split: ": " %}
-        in <a href="{{ paper_link | slice: 1 }}" class=external>{{ post.journal }}</a>
+        in <a href="{{ paper_link | slice: 1 }}">{{ post.journal }}</a>
       {% endif %}
       on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
     {% endif %}
