@@ -2,7 +2,7 @@
 layout: page
 title: About Sambit
 permalink: /about/
-desc: Hi, my name is Sambit &#128075;. I develop novel approaches to analyze data and use them to answer interesting biomedical problems. You can learn more about the things I have done professionally on my <a href="/assets/pdf/cv.pdf">CV</a>.
+desc: Hi, my name is Sambit &#128075;. I develop novel approaches to analyze data and use them to answer interesting biomedical problems. You can learn more about the things I have done professionally on my <a href="https://cv.sampan.me">CV</a>.
 ---
 
 <p>
