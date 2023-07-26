@@ -141,7 +141,7 @@ url:            https://sampan.me
 # grabs the first image of your post as post featured image.
 #
 # Default:      https://d349cztnlupsuf.cloudfront.net
-file:           https://d1mfybxdl6x0wm.cloudfront.net
+# file:           https://d1mfybxdl6x0wm.cloudfront.net
 
 # Download files URL
 #
