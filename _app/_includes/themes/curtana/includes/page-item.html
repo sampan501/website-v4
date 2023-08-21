@@ -23,30 +23,32 @@
 {% endcapture %}
 
 <section class="list">
-  <h1>
-    <!-- Item title -->
-    {% if post.external %}
-      <a href="{{ post.external }}">{{ amsf_page_title }}</a>
+
+  {% case post.category %}
+  {% when "research" %}
+    {% if post.tags contains "other" %}
+    <h1 style="text-indent:0;">
     {% else %}
+    <h1 style="text-indent:0;">
+    {% endif %}
+      {% if post.type %}
+        <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/{{ post.type }}.svgz">
+      {% endif %}
       <a href="{{ post.url | relative_url }}" {% if site.data.curtana.colorful_list %}{{ post_link_color }}{% endif %}>{{ amsf_page_title }}</a>
-    {% endif %}
-
-    <!-- External link indicator -->
-    {% if post.link %}
-      <a href="{{ post.link }}" class=external><span class="dot" {% if site.data.curtana.colorful_list %}{{ post_link_bg }}{% endif %}> </span></a>
-    {% endif %}
-  </h1>
-
-  <small>
-    {% if post.category == "research" %}
+    </h1>
+    <small>
       by {{ post.authors }}<br />
       {% if post.journal %}
         {% assign paper_link = post.links[0] | split: ": " %}
         in <a href="{{ paper_link | slice: 1 }}">{{ post.journal }}</a>
       {% endif %}
       on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-    {% endif %}
-  </small>
+    </small>
+  {% when "software" %}
+    <h1 style="text-indent:0;"><a href="{{ post.external }}">{{ amsf_page_title }}</a></h1>
+  {% else %}
+    <h1 style="text-indent:0;"><a href="{{ post.url | relative_url }}" {% if site.data.curtana.colorful_list %}{{ post_link_color }}{% endif %}>{{ amsf_page_title }}</a></h1>
+  {% endcase %}
 
   {% if post.desc %}
     <small>{{ post.desc }}</small>

@@ -6,6 +6,7 @@ authors: "Haoyin Xu, Jayanta Dey, <b>Sambit Panda</b>, and Joshua T. Vogelstein"
 journal: arXiv
 links:
 - "arXiv: https://arxiv.org/pdf/2110.08483.pdf"
+type: 1f4dd
 tags: articles
 ---
 

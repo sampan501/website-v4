@@ -8,6 +8,7 @@ links:
 - "Paper: https://www.tandfonline.com/doi/abs/10.1080/10618600.2021.1938585?journalCode=ucgs20"
 - "arXiv: https://arxiv.org/pdf/1912.12150.pdf"
 - "Code: https://hyppo.neurodata.io/api/generated/hyppo.independence.dcorr#hyppo.independence.Dcorr.test"
+type: 1f4c4
 tags: [articles, selected]
 ---
 

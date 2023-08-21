@@ -7,6 +7,7 @@ journal: ACS Anal. Chem.
 links:
 - "Paper: https://pubs.acs.org/doi/pdf/10.1021/acs.analchem.7b03770"
 - "Poster: assets/pdf/2018-sensor-pittcon.pdf"
+type: 1f4c4
 tags: [articles, selected]
 ---
 

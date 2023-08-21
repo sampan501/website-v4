@@ -9,6 +9,7 @@ links:
 - "Code: https://github.com/neurodata/hyppo"
 - "Docs: https://hyppo.neurodata.io/"
 - "Talk: https://neurodata.io/talks/scipy21.html"
+type: 1f4dd
 tags: articles
 ---
 

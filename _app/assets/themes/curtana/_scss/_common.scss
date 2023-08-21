@@ -787,10 +787,24 @@ body:hover .latest {
     // Override heading defines in .content
     opacity: 1;
     margin: 0;
+    text-indent: -1.126em;
 
     @media (max-width: $breakpoint-sm) {
       // Hide external link for post list
       font-size: 180%;
+      text-indent: 0;
+    }
+  }
+
+  img {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 -1.215em;
+    vertical-align: -0.1em;
+    @media (max-width: $breakpoint-sm) {
+      // Hide external link for post list
+      margin: 0 .05em 0 0;
     }
   }
 

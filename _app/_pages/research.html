@@ -5,8 +5,13 @@ permalink: /research/
 desc: Some stuff I've investigated. A full list of my papers is also available <a href="https://scholar.google.com/citations?user=-V3CmPoAAAAJ&hl=en">on Google Scholar</a>.
 ---
 
-<h2>Papers</h2>
+<h2>Publications</h2>
 {% for post in site.tags.articles %}
+  {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
+{% endfor %}
+
+<h2>Theses</h2>
+{% for post in site.tags.thesis %}
   {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
 {% endfor %}
 

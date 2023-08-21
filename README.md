@@ -5,6 +5,8 @@
 [![CircleCI](https://circleci.com/gh/sparanoid/almace-scaffolding.svg?style=svg)](https://circleci.com/gh/sparanoid/almace-scaffolding)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/sparanoid/amsf)
 
+Also uses twemoji
+
 ## Requirements
 
 Almace Scaffolding has exactly the same requirements as Jekyll. For more info please refer to [Installation - Jekyll](https://jekyllrb.com/docs/installation/).
