@@ -1,0 +1,44 @@
+---
+---
+
+<h1>
+    {% case entry.type %}
+        {% when "misc" %}
+        <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/1f4dd.svgz">
+        {% when "article" %}
+        <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/1f4c4.svgz">
+        {% when "thesis", "phdthesis" %}
+        <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/1f393.svgz">
+    {% endcase %}
+    <a href="{% details_link key %}">{{ entry.title }}</a>
+</h1>
+
+<small>
+    {% assign authorCount = entry.author_array | size %}
+    by
+    {% for author in entry.author_array %}
+        {% capture name %}{{ author.first }} {{ author.last }}{% endcapture %}
+        {% if name == "Sambit Panda" %}
+            {% capture name %}<b>{{ name }}</b>{% endcapture %}
+        {% endif %}
+        {% if authorCount == 1 %}
+            {{ name }}
+        {% else %}
+            {% if forloop.last %}
+                and {{ name }}
+            {% else %}
+                {{ name }}, 
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    <br />
+    {% case entry.type %}
+        {% when "article" %}
+        in <a href="http://doi.org/{{ entry.doi }}">{{ entry.journal }}</a>
+        {% when "misc" %}
+        in <a href="http://doi.org/{{ entry.doi }}">{{ entry.publisher }}</a>
+        {% when "thesis", "phdthesis" %}
+        in <a href="{{ entry.url }}">{{ entry.school }}</a>
+    {% endcase %}
+    on {{ entry.month | date: "%B" }}, {{ entry.year }}
+</small>

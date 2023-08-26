@@ -2,20 +2,23 @@
 layout: page
 title: Research
 permalink: /research/
-desc: Some stuff I've investigated. A full list of my papers is also available <a href="https://scholar.google.com/citations?user=-V3CmPoAAAAJ&hl=en">on Google Scholar</a>.
+desc: |
+  My work encompasses many topics, including causal inference, hypothesis testing, neuroscience, etc.
+  You see my work by type below, or you can <a href="/research/topic">browse by topic</a> or <a href="/research/year">by year</a>.
+  A full list is also available <a href="https://scholar.google.com/citations?user=-V3CmPoAAAAJ&hl=en">on Google Scholar</a>.
 ---
 
-<h2>Publications</h2>
-{% for post in site.tags.articles %}
-  {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
-{% endfor %}
+<h2 id="pubs">Publications</h2>
+<section class="list">
+  {% bibliography -q @article && @misc %}
+</section>
 
-<h2>Theses</h2>
-{% for post in site.tags.thesis %}
-  {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
-{% endfor %}
+<h2 id="thesis">Theses</h2>
+<section class="list">
+  {% bibliography -q @phdthesis %}
+</section>
 
-<h2>Misc</h2>
-{% for post in site.tags.other %}
-  {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
-{% endfor %}
+<h2 id="misc">Misc</h2>
+<section class="list">
+  {% bibliography -q @other %}
+</section>

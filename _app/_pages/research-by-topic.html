@@ -1,0 +1,24 @@
+---
+layout: page
+title: Research by Topic
+permalink: /research/topic
+topics: [causal, hypothesis, neural-nets, neuro, rf]
+headings: [Causal Inference, Hypothesis Testing, Neural Networks, Neuroscience, Random Forest]
+desc: |
+  My work encompasses many topics, including causal inference, hypothesis testing, neuroscience, etc.
+  You see my work by topic below, or you can <a href="/research">browse by type</a> or <a href="/research/year">by year</a>.
+  A full list is also available <a href="https://scholar.google.com/citations?user=-V3CmPoAAAAJ&hl=en">on Google Scholar</a>.
+---
+
+<div class="grid-container">
+{% for t in page.topics %}
+  <div class="grid-item"><a href="#{{t}}">{{ page.headings[forloop.index0] }}</a></div>
+{% endfor %}
+</div>
+
+{% for t in page.topics %}
+  <h2 id={{t}}>{{ page.headings[forloop.index0] }}</h2>
+  <section class="list">
+    {% bibliography -q @*[keywords~={{t}}]* %}
+  </section>
+{% endfor %}

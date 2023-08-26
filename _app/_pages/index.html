@@ -12,19 +12,24 @@ thumb_force_logo: true
   <!-- Post title -->
   <header>
 
-    <h1>
-      Sambit Panda
-    </h1>
-
-    <h2 class="sub-title">Biomedical Engineering Ph.D. Candidate</h2>
-
-    <small>
-      <a href="https://scholar.google.com/citations?user=-V3CmPoAAAAJ&hl=en">Google Scholar</a> &#x30FB;
-      <a href="https://github.com/sampan501">GitHub</a> &#x30FB;
-      <a href="https://www.linkedin.com/in/sampan501/">LinkedIn</a> &#x30FB;
-      <a href="mailto:spanda3@jhu.edu">Email</a> &#x30FB;
-      <a href="/assets/pdf/cv.pdf">CV</a>
-    </small>
+    <div class="profile-header">
+      <picture>
+        <source srcset="profile.avif" type="image/avif">
+        <source srcset="profile.webp" type="image/webp">
+        <img class="profile-img" src="profile.jpg" alt="Sambit Panda profile picture">
+      </picture>
+      <div class="profile-title">
+        <h1>Sambit Panda</h1>
+        <h2 class="sub-title">Biomedical Engineering PhD Candidate</h2>
+        <small>
+          <a href="https://scholar.google.com/citations?user=-V3CmPoAAAAJ&hl=en">Google Scholar</a> &#x30FB;
+          <a href="https://github.com/sampan501">GitHub</a> &#x30FB;
+          <a href="https://www.linkedin.com/in/sampan501/">LinkedIn</a> &#x30FB;
+          <a href="mailto:spanda3@jhu.edu">Email</a> &#x30FB;
+          <a href="/assets/pdf/cv.pdf">CV</a>
+        </small>
+      </div>
+    </div>
 
   </header>
 
@@ -32,28 +37,26 @@ thumb_force_logo: true
 
     <p>
       Welcome to my little corner of the internet!
-
-      I'm a biomedical data scientist currently at <a href="https://neurodata.io/">NeuroData</a> and in the middle of a <a href="https://www.bme.jhu.edu/academics/graduate/phd-program/">Ph.D. at Johns Hopkins</a>.
+      I'm currently a PhD candidate <a href="https://www.bme.jhu.edu/academics/graduate/phd-program/">at Johns Hopkins</a>, where
+      I am advised by <a href="https://jovo.me/">Joshua T. Vogelstein</a> in the <a href="https://neurodata.io/">NeuroData lab</a>,
+      and funded by a <a href="https://researchtraining.nih.gov/programs/training-grants/T32-a">NIH Grant</a>.
       Most days, I spend developing new approaches to data analysis and applying those to interesting biomedical datasets.
       Here's a little bit more <a href="about">about me</a>.
     </p>
 
-    <h2>Publications</h2>
+    <h2 id="pubs">Publications</h2>
     <p>
       Here are some of my favorite research articles that I have written.
       If you want to read more, here is the <a href="research">full publication list</a>.
     </p>
-    {% for post in site.categories.research %}
-      {% if post.tags contains "selected" %}
-        {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
-      {% endif %}
-    {% endfor %}
+    <section class="list">
+      {% bibliography -q @*[selected=true] %}
+    </section>
 
-    <h2>Software</h2>
+    <h2 id="software">Software</h2>
     <p>
-      I love solving difficult problems, often times developing software to help.
-      Here are some of my favorite software that I've made.
-      If you want to read more, here is the <a href="software">full list</a>.
+      I love solving difficult problems, and often times develop software to help.
+      If you want to see more, here is the <a href="software">full software list</a>.
     </p>
     {% for post in site.categories.software %}
       {% if post.tags contains "selected" %}

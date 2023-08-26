@@ -49,6 +49,23 @@ kramdown:
 # Plugins inside `jekyll_plugins` group in `Gemfile` will be actived by default
 plugins:
   - jekyll-last-modified-at
+  - jekyll/scholar
+
+# jekyll-scholar config
+scholar:
+  source: ./assets/bib
+  bibliography: "research.bib"
+  bibliography_template: bib
+  sort_by: year, month
+  order: descending
+  # HTML tag used for list of bibliography entries
+  bibliography_list_tag: 'ul'
+
+  details_dir: _layouts
+  details_layout: bibtex.html
+  details_permalink: /:key:extension
+  details_link: ""
+  bibtex_skip_fields: ["abstract", "month_numeric", "keywords", "links"]
 
 #
 # Almace Scaffolding settings

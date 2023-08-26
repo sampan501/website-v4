@@ -19,4 +19,4 @@ dev:            true
 baseurl:        ""
 
 # CDN location for development
-file:           https://s3.amazonaws.com/sampan
+# file:           https://s3.amazonaws.com/sampan

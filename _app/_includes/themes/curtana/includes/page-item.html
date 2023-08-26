@@ -23,7 +23,6 @@
 {% endcapture %}
 
 <section class="list">
-
   {% case post.category %}
   {% when "research" %}
     {% if post.tags contains "other" %}
@@ -45,7 +44,7 @@
       on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
     </small>
   {% when "software" %}
-    <h1 style="text-indent:0;"><a href="{{ post.external }}">{{ amsf_page_title }}</a></h1>
+    <h1><a href="{{ post.external }}">{{ amsf_page_title }}</a></h1>
   {% else %}
     <h1 style="text-indent:0;"><a href="{{ post.url | relative_url }}" {% if site.data.curtana.colorful_list %}{{ post_link_color }}{% endif %}>{{ amsf_page_title }}</a></h1>
   {% endcase %}

@@ -1,0 +1,93 @@
+---
+layout: default
+usemathjax: true
+---
+
+<!-- Post-wide custom CSS -->
+{{ amsf_page_css }}
+
+<!-- Article wrapper, limit width -->
+<article lang="{{ amsf_page_lang }}">
+
+  <!-- Post title -->
+  <header {{ amsf_page_heading_bg }}>
+
+    <h1  id="page-title" class="{{ amsf_page_heading_class }}" title="{{ page.entry.title | strip_html | xml_escape }}" data-title="{{ page.entry.title | strip_html | xml_escape }}">
+      {{ page.entry.title }}
+    </h1>
+
+  </header>
+
+  <!-- Post content -->
+  <div class="post-content">
+
+    <small>
+    <i>
+      {% assign authorCount = page.entry.author_array | size %}
+      by
+      {% for author in page.entry.author_array %}
+          {% capture name %}{{ author.first }} {{ author.last }}{% endcapture %}
+          {% if name == "Sambit Panda" %}
+              {% capture name %}<b>{{ name }}</b>{% endcapture %}
+          {% endif %}
+          {% if authorCount == 1 %}
+              {{ name }}
+          {% else %}
+              {% if forloop.last %}
+                  and {{ name }}
+              {% else %}
+                  {{ name }}, 
+              {% endif %}
+          {% endif %}
+      {% endfor %}
+      <br />
+      {% case page.entry.type %}
+          {% when "article" %}
+          in {{ page.entry.journal }}
+          {% when "misc" %}
+          in {{ page.entry.publisher }}
+          {% when "thesis", "phdthesis" %}
+          in {{ page.entry.school }}
+      {% endcase %}
+      on {{ page.entry.month | date: "%B" }}, {{ page.entry.year }}
+    </i>
+    </small>
+
+    <center>
+      <div class="largetype">
+        {% case page.entry.type %}
+            {% when "article" %}
+            <a href="http://doi.org/{{ page.entry.doi }}">Paper</a>
+            {% when "misc" %}
+            <a href="http://doi.org/{{ page.entry.doi }}">{{ page.entry.publisher }}</a>
+            {% when "thesis", "phdthesis" %}
+            <a href="{{ page.entry.url }}">Thesis</a>
+        {% endcase %}
+        {% if page.entry.links %}
+          {% assign link_value = page.entry.links | split: ", " %}
+          {% for link in link_value %}
+            {% unless page.entry.type == "other" and forloop.first %}
+              &#x30FB; 
+            {% endunless %}
+            {% assign link_value = link | split: ": " %}
+            <a href="{{ link_value | slice: 1 }}">{{ link_value | slice: 0 }}</a>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </center>
+
+    {% if page.entry.abstract %}
+      <h2>Abstract</h2>
+    {% else %}
+      <h2>Summary</h2>
+    {% endif %}
+    <p>{{ page.entry.abstract | markdownify }}</p>
+    
+    {% unless page.entry.type == "other" %}
+      <h2>Citation</h2>
+      <pre>{{ page.entry.bibtex }}</pre>
+    {% endunless %}
+  </div>
+
+</article>
+

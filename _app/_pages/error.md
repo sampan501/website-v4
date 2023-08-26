@@ -1,15 +1,12 @@
 ---
 layout: page
-title: Error?
+title: Page Not Found
 permalink: /404.html
-desc: Oops
+desc: Looks like there has been a mistake. Nothing exists here.
 category: home
 hidden: true
-css: |
-  :root {
-    filter: invert(100%);
-  }
 ---
 
-<p>The requested URL was not found on this server.</p>
-<p>I’m sorry, you can close this tab now.</p>
+The page you were after may have been moved, deleted, or doesn’t exist. Or maybe there was a typo in the link you followed.
+
+You should be able to get where you need to go using the navigation, but, if you still can’t find the page you’re looking for, please let me know.

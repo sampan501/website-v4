@@ -162,3 +162,11 @@ Go to the [GitHub repository](https://github.com/sparanoid/almace-scaffolding) f
 ## Jekyll Migration
 
 You can simply copy all posts from your old Jekyll setup into `_app/_posts`, you can also transfer your custom pages into `_app/_pages/`.
+
+## Attributions
+
+I'd love to thank a number of websites and packages for helping me create this website. These include:
+
+- [Almace Scaffolding](https://sparanoid.com/lab/amsf/) - The template which this website is based on
+- [Twemoji](https://twemoji.twitter.com/), [emoji-assets-twemoji](https://github.com/s9e/emoji-assets-twemoji) - Emoji icons used in the in the publications page
+- [jonbarron.info](https://jonbarron.info/), [tempertemper.net](https://www.tempertemper.net/), [stefanzweifel.dev/](https://stefanzweifel.dev/), [bdpedigo.github.io](https://bdpedigo.github.io/), [neurodata.io/about/jovo/](https://neurodata.io/about/jovo/) - Other's personal websites that were helpful in design/content

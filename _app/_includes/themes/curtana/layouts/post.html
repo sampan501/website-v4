@@ -7,42 +7,19 @@
   <!-- Post title -->
   <header {{ amsf_page_heading_bg }}>
 
-    <h1 class="{{ amsf_page_heading_class }}" title="{{ amsf_page_title | strip_html | xml_escape }}" data-title="{{ amsf_page_title | strip_html | xml_escape }}">
+    <h1 id="page-title" class="{{ amsf_page_heading_class }}" title="{{ amsf_page_title | strip_html | xml_escape }}" data-title="{{ amsf_page_title | strip_html | xml_escape }}">
       {{ amsf_page_heading }}
     </h1>
-
-    {% if page.date %}
-      <small>
-        {% if page.category == "research" %}
-          by {{ page.authors }}<br />
-          {% if page.journal %}
-            {% assign paper_link = page.links[0] | split: ": " %}
-            in <a href="{{ paper_link | slice: 1 }}" class=external>{{ page.journal }}</a>
-          {% endif %}
-          on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-        {% endif %}
-      </small>
-    {% endif %}
-
-    {% if page.desc %}
-      <small>{{ page.desc }}</small>
-    {% endif %}
 
   </header>
 
   <!-- Post content -->
   <div class="post-content">
-    {% if page.links %}
-      <div class="largetype">
-        {% for link in page.links %}
-          {% assign link_value = link | split: ": " %}
-          {% if forloop.last %}
-            <a href="{{ link_value | slice: 1 }}">{{ link_value | slice: 0 }}</a>
-          {% else %}
-            <a href="{{ link_value | slice: 1 }}">{{ link_value | slice: 0 }}</a> &#x30FB;
-          {% endif %}
-        {% endfor %}
-      </div>
+
+    {% if page.date %}
+      <small>
+      <i>on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></i>
+      </small>
     {% endif %}
 
     {{ content }}
