@@ -39,11 +39,6 @@
     }
   }
 
-  @media (max-width: $breakpoint-sm) {
-    // Hide external link for post list
-    font-size: 180%;
-  }
-
   ul {
     list-style-type: none;
     margin-left: 0;
