@@ -780,7 +780,7 @@ body:hover .latest {
   display: block;
   margin: 0 0 .4rem;
 
-  h1 {
+  .title {
     @include heading();
     font-size: 200%;
     line-height: 1.1;

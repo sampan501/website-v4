@@ -22,13 +22,13 @@ usemathjax: true
   <div class="post-content">
 
     <small>
-    <i>
+    <em>
       {% assign authorCount = page.entry.author_array | size %}
       by
       {% for author in page.entry.author_array %}
           {% capture name %}{{ author.first }} {{ author.last }}{% endcapture %}
           {% if name == "Sambit Panda" %}
-              {% capture name %}<b>{{ name }}</b>{% endcapture %}
+              {% capture name %}<strong>{{ name }}</strong>{% endcapture %}
           {% endif %}
           {% if authorCount == 1 %}
               {{ name }}
@@ -50,7 +50,7 @@ usemathjax: true
           in {{ page.entry.school }}
       {% endcase %}
       on {{ page.entry.month | date: "%B" }}, {{ page.entry.year }}
-    </i>
+    </em>
     </small>
 
     <center>

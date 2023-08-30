@@ -1,17 +1,17 @@
 ---
 ---
 
-<h1>
+<div class="title">
     {% case entry.type %}
         {% when "misc" %}
-        <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/1f4dd.svgz">
+        <img alt="Emoji for misc entries in bibtex" width="40" height="40" src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/1f4dd.svgz">
         {% when "article" %}
-        <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/1f4c4.svgz">
+        <img alt="Emoji for article entries in bibtex" width="40" height="40" src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/1f4c4.svgz">
         {% when "thesis", "phdthesis" %}
-        <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/1f393.svgz">
+        <img alt="Emoji for thesis entries in bibtex" width="40" height="40" src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/1f393.svgz">
     {% endcase %}
     <a href="{% details_link key %}">{{ entry.title }}</a>
-</h1>
+</div>
 
 <small>
     {% assign authorCount = entry.author_array | size %}
@@ -19,7 +19,7 @@
     {% for author in entry.author_array %}
         {% capture name %}{{ author.first }} {{ author.last }}{% endcapture %}
         {% if name == "Sambit Panda" %}
-            {% capture name %}<b>{{ name }}</b>{% endcapture %}
+            {% capture name %}<strong>{{ name }}</strong>{% endcapture %}
         {% endif %}
         {% if authorCount == 1 %}
             {{ name }}

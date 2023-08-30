@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-desc: Hi, my name is Sambit  <span class="wave">👋</span>.
+desc: Hi, my name is Sambit! <span class="wave">👋</span>
 css: |
   .wave {
     animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
@@ -24,33 +24,31 @@ css: |
   }
 ---
 
-I have a wide array of experience, from using electrochemistry to understand neural systems at the
-[Sombers Lab](https://www.somberslab.org/) in my undergrad at
-[NC State](https://www.bme.ncsu.edu/) and to building tools that enable better data analysis
-at [NeuroData](https://neurodata.io/) at [Johns Hopkins](https://www.bme.jhu.edu/)
-via a [NIH Fellowship](https://researchtraining.nih.gov/programs/training-grants/T32-a)
-These opportunities allowed me the pleasure to work on a wide variety of interesting and meaningful projects on a
-daily basis.
+I'm a Ph.D. candidate in the [Department of Biomedical Engineering](http://www.bme.jhu.edu/) and [Institute of Computational Medicine](https://icm.jhu.edu/) at [Johns Hopkins](https://www.jhu.edu/).
+My research interests lie on the intersection of statistics, machine learning, and medicine.
 
-When I'm not doing work, I like to read books and go on hikes!
+At Hopkins, I've had the pleasure working with [Joshua T. Vogelstein](https://jovo.me/) in the [NeuroData lab](https://neurodata.io/).
+I work on developing methods for high-dimensional hypothesis testing, causal inference, and extensions of random forest.
+These methods are neatly wrapped in the [hyppo](https://github.com/neurodata/hyppo) and [scikit-tree](https://github.com/neurodata/scikit-tree) packages.
+I have also applied these methods to real data sets, including those from [Bert Vogelstein](https://www.hopkinsmedicine.org/profiles/details/bert-vogelstein) and the [Neurobehavioral Core at NIEHS](https://www.niehs.nih.gov/research/atniehs/facilities/neurobehavioral/index.cfm) (as a data science intern over the summer).
 
-## Research Interests
+I completed by my master's degree (MSE) in Biomedical Engineering at Johns Hopkins in 2020. I was also an undergard at [NC State](https://www.ncsu.edu/) in [Biomedical Engineering](https://bme.unc.edu/) and [Biology](https://bio.sciences.ncsu.edu/) while on the [Goodnight Scholarship](https://goodnight.ncsu.edu/). There, I worked with [Leslie Sombers](https://www.somberslab.org/), using electrochemistry to understand neural systems. 
 
-* Causal Inference
-* Hypothesis Testing
-* Neuroscience
-* Genomics
+Also, I run the Ramchandara Panda Scholarship Competition, which provides scholarships to local students in my family's village in India and helps preserve local traditions for future generations.
 
-## Education
-
-* Ph.D. in [Biomedical Engineeering](https://www.bme.jhu.edu/), Johns Hopkins
-* M.S.E. in [Biomedical Engineeering](https://www.bme.jhu.edu/), Johns Hopkins
-* B.S. in [Biomedical Engineeering](http://catalog.ncsu.edu/undergraduate/engineering/biomedical/) & [Biology](https://bio.sciences.ncsu.edu/),  NC State
+In my free time, I like to read books and go on hikes!
 
 ## Links
-
-- [Website](/)
 - [Google Scholar](https://scholar.google.com/citations?user=-V3CmPoAAAAJ&hl=en)
 - [GitHub](https://github.com/sampan501)
 - [LinkedIn](https://www.linkedin.com/in/sampan501/)
+- [Email](mailto:spanda3@jhu.edu)
 - [CV](/assets/pdf/cv.pdf)
+
+## Bio
+
+Sambit Panda is a Ph.D. candidate in the Department of Biomedical Engineering at Johns Hopkins University, where he is advised by Joshua T. Vogelstein.
+His research focuses on the following topics: causal inference, hypothesis testing, neuroscience, and random forest extensions.
+He received a MSE in Biomedical Engineering from Johns Hopkins in 2020, and he received a BS in Biomedical Engineering and Biology from North Carolina State University in 2018, where he worked with Leslie Sombers.
+He received the Goodnight Scholarship in 2018 and the National Institutes of Health T32-a Grant in 2020.
+He has also reviewed papers for SoftwareX and SciPy (2020, 2021) and chaired for SciPy (2020, 2021, 2023).

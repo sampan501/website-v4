@@ -18,7 +18,7 @@
 
     {% if page.date %}
       <small>
-      <i>on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></i>
+      <em>on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></em>
       </small>
     {% endif %}
 
