@@ -27,14 +27,14 @@ css: |
 I'm a Ph.D. candidate in the [Department of Biomedical Engineering](http://www.bme.jhu.edu/) and [Institute of Computational Medicine](https://icm.jhu.edu/) at [Johns Hopkins](https://www.jhu.edu/).
 My research interests lie on the intersection of statistics, machine learning, and medicine.
 
-At Hopkins, I've had the pleasure working with [Joshua T. Vogelstein](https://jovo.me/) in the [NeuroData lab](https://neurodata.io/).
+At Hopkins, I've had the pleasure working with [Dr. Joshua T. Vogelstein](https://jovo.me/) in the [NeuroData lab](https://neurodata.io/).
 I work on developing methods for high-dimensional hypothesis testing, causal inference, and extensions of random forest.
-These methods are neatly wrapped in the [hyppo](https://github.com/neurodata/hyppo) and [scikit-tree](https://github.com/neurodata/scikit-tree) packages.
-I have also applied these methods to real data sets, including those from [Bert Vogelstein](https://www.hopkinsmedicine.org/profiles/details/bert-vogelstein) and the [Neurobehavioral Core at NIEHS](https://www.niehs.nih.gov/research/atniehs/facilities/neurobehavioral/index.cfm) (as a data science intern over the summer).
+These methods are neatly wrapped in the [hyppo](https://github.com/neurodata/hyppo) and [scikit-tree](https://github.com/neurodata/scikit-tree) Python packages.
+I have also applied these methods to real data sets, including those from [Dr. Bert Vogelstein](https://www.hopkinsmedicine.org/profiles/details/bert-vogelstein) and the [Neurobehavioral Core at NIEHS](https://www.niehs.nih.gov/research/atniehs/facilities/neurobehavioral/index.cfm) (as a data science intern over the summer of 2023).
 
-I completed by my master's degree (MSE) in Biomedical Engineering at Johns Hopkins in 2020. I was also an undergard at [NC State](https://www.ncsu.edu/) in [Biomedical Engineering](https://bme.unc.edu/) and [Biology](https://bio.sciences.ncsu.edu/) while on the [Goodnight Scholarship](https://goodnight.ncsu.edu/). There, I worked with [Leslie Sombers](https://www.somberslab.org/), using electrochemistry to understand neural systems. 
+I completed my master's degree (MSE) in Biomedical Engineering at Johns Hopkins in 2020. I was also an undergard at [NC State](https://www.ncsu.edu/) in [Biomedical Engineering](https://bme.unc.edu/) and [Biology](https://bio.sciences.ncsu.edu/) while on the [Goodnight Scholarship](https://goodnight.ncsu.edu/). There, I worked with [Dr. Leslie Sombers](https://www.somberslab.org/), using electrochemistry to understand neural systems. 
 
-Also, I run the Ramchandara Panda Scholarship Competition, which provides scholarships to local students in my family's village in India and helps preserve local traditions for future generations.
+As a way to "pay it forward", I run the Ramchandara Panda Scholarship Competition, which provides scholarships to local students in my family's village in India and helps preserve local traditions for future generations.
 
 In my free time, I like to read books and go on hikes!
 
@@ -47,8 +47,8 @@ In my free time, I like to read books and go on hikes!
 
 ## Bio
 
-Sambit Panda is a Ph.D. candidate in the Department of Biomedical Engineering at Johns Hopkins University, where he is advised by Joshua T. Vogelstein.
+Sambit Panda is a Ph.D. candidate in the Department of Biomedical Engineering at Johns Hopkins University, where he is advised by Dr. Joshua T. Vogelstein.
 His research focuses on the following topics: causal inference, hypothesis testing, neuroscience, and random forest extensions.
-He received a MSE in Biomedical Engineering from Johns Hopkins in 2020, and he received a BS in Biomedical Engineering and Biology from North Carolina State University in 2018, where he worked with Leslie Sombers.
+He received a MSE in Biomedical Engineering from Johns Hopkins in 2020, and he received a BS in Biomedical Engineering and Biology from North Carolina State University in 2018.
 He received the Goodnight Scholarship in 2018 and the National Institutes of Health T32-a Grant in 2020.
 He has also reviewed papers for SoftwareX and SciPy (2020, 2021) and chaired for SciPy (2020, 2021, 2023).
