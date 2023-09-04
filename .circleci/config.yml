@@ -4,15 +4,15 @@ version: 2.1
 references:
   defaults: &defaults
     working_directory: ~/repo
+    parallelism: 4
     environment:
-      TZ: "/usr/share/zoneinfo/Asia/Hong_Kong"
       TERM: xterm
 
 jobs:
   build:
     <<: *defaults
     docker:
-      - image: circleci/ruby:3.0.3-node-browsers
+      - image: cimg/ruby:3.1.3-node-browsers
     steps:
       - checkout
       - restore_cache:
