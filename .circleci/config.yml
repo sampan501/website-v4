@@ -4,7 +4,6 @@ version: 2.1
 references:
   defaults: &defaults
     working_directory: ~/repo
-    parallelism: 4
     environment:
       TERM: xterm
 
