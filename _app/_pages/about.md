@@ -43,7 +43,7 @@ In my free time, I like to read books and go on hikes!
 - [GitHub](https://github.com/sampan501)
 - [LinkedIn](https://www.linkedin.com/in/sampan501/)
 - [Email](mailto:spanda3@jhu.edu)
-- [CV](/assets/pdf/cv.pdf)
+- [Resume](/assets/pdf/Sambit%20Panda%20Resume.pdf)
 
 ## Bio
 

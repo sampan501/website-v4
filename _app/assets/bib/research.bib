@@ -100,17 +100,17 @@
   links = {Code: https://hyppo.neurodata.io/api/generated/hyppo.ksample.ksample#hyppo.ksample.KSample, Poster: assets/pdf/2021-hyppo-brain.pdf, Talk: assets/pdf/2021-hyppo-gyss.pdf}
 }
 
-@misc{shen2020learning,
+@misc{panda2023learning,
   title = {Learning {{Interpretable Characteristic Kernels}} via {{Decision Forests}}},
-  author = {Shen, Cencheng and Panda, Sambit and Vogelstein, Joshua T.},
-  year = {2020},
+  author = {Panda, Sambit and Shen, Cencheng and Vogelstein, Joshua T.},
+  year = {2023},
   month = sep,
   number = {arXiv:1812.00029},
   eprint = {1812.00029},
   primaryclass = {cs, stat},
   publisher = {{arXiv}},
   doi = {10.48550/arXiv.1812.00029},
-  abstract = {Decision forests are popular tools for classification and regression. These forests naturally produce proximity matrices measuring how often each pair of observations lies in the same leaf node. It has been demonstrated that these proximity matrices can be thought of as kernels, connecting the decision forest literature to the extensive kernel machine literature. While other kernels are known to have strong theoretical properties such as being characteristic, no similar result is available for any decision forest based kernel. In this manuscript,we prove that the decision forest induced proximity can be made characteristic, which can be used to yield a universally consistent statistic for testing independence. We demonstrate the performance of the induced kernel on a suite of 20 high-dimensional independence test settings. We also show how this learning kernel offers insights into relative feature importance. The decision forest induced kernel typically achieves substantially higher testing power than existing popular methods in statistical tests.},
+  abstract = {Decision forests are widely used for classification and regression tasks. A lesser known property of tree-based methods is that one can construct a proximity matrix from the tree(s), and these proximity matrices are induced kernels. While there has been extensive research on the applications and properties of kernels, there is relatively little research on kernels induced by decision forests. We construct Kernel Mean Embedding Random Forests (KMERF), which induce kernels from random trees and/or forests using leaf-node proximity. We introduce the notion of an asymptotically characteristic kernel, and prove that KMERF kernels are asymptotically characteristic for both discrete and continuous data. Because KMERF is data-adaptive, we suspected it would outperform kernels selected a priori on finite sample data. We illustrate that KMERF nearly dominates current state-of-the-art kernel-based tests across a diverse range of high-dimensional two-sample and independence testing settings. Furthermore, our forest-based approach is interpretable, and provides feature importance metrics that readily distinguish important dimensions, unlike other high-dimensional non-parametric testing procedures. Hence, this work demonstrates the decision forest-based kernel can be more powerful and more interpretable than existing methods, flying in the face of conventional wisdom of the trade-off between the two.},
   archiveprefix = {arxiv},
   copyright = {All rights reserved},
   keywords = {hypothesis,rf},
