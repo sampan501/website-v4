@@ -74,34 +74,7 @@ small {
 }
 
 .navigation {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-  margin-bottom: 4rem;
-  
-  ul {        
-    float: left;
-    align-items: center;
-  }
-  
-  .home {
-    float: left;
-    line-height: 2;
-
-    a {
-      padding: .5em var(--nav-padding);
-
-      &:hover,
-      &:focus {
-        color: var(--link-color);
-        text-decoration: none;
-      }
-    }
-  }
-
-  @media (max-width: $breakpoint-xs) {
-    flex-direction: column;
-  }
+  margin-bottom: 6rem;
 }
 
 .footer {
