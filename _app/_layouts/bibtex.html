@@ -24,11 +24,15 @@ usemathjax: true
     <small>
     <em>
       {% assign authorCount = page.entry.author_array | size %}
+      {% assign hasStars = false %}
       by
       {% for author in page.entry.author_array %}
           {% capture name %}{{ author.first }} {{ author.last }}{% endcapture %}
-          {% if name == "Sambit Panda" %}
-              {% capture name %}<strong>{{ name }}</strong>{% endcapture %}
+          {% if name contains "*" %}
+              {% assign hasStars = true %}
+          {% endif %}
+          {% if name contains "Sambit Panda" %}
+            {% capture name %}<strong>{{ name }}</strong>{% endcapture %}
           {% endif %}
           {% if authorCount == 1 %}
               {{ name }}
@@ -50,6 +54,10 @@ usemathjax: true
           in {{ page.entry.school }}
       {% endcase %}
       on {{ page.entry.month | date: "%B" }}, {{ page.entry.year }}
+      {% if hasStars %}
+        <br /><br />
+        *Equal Contribution
+      {% endif %}
     </em>
     </small>
 

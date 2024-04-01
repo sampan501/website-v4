@@ -18,7 +18,7 @@
     by
     {% for author in entry.author_array %}
         {% capture name %}{{ author.first }} {{ author.last }}{% endcapture %}
-        {% if name == "Sambit Panda" %}
+        {% if name contains "Sambit Panda" %}
             {% capture name %}<strong>{{ name }}</strong>{% endcapture %}
         {% endif %}
         {% if authorCount == 1 %}
