@@ -2,82 +2,85 @@
 layout: default
 usemathjax: true
 ---
-
 <!-- Post-wide custom CSS -->
 {{ amsf_page_css }}
 
 <!-- Article wrapper, limit width -->
 <article lang="{{ amsf_page_lang }}">
-
   <!-- Post title -->
   <header {{ amsf_page_heading_bg }}>
-
-    <h1  id="page-title" class="{{ amsf_page_heading_class }}" title="{{ page.entry.title | strip_html | xml_escape }}" data-title="{{ page.entry.title | strip_html | xml_escape }}">
+    <h1
+      id="page-title"
+      class="{{ amsf_page_heading_class }}"
+      title="{{ page.entry.title | strip_html | xml_escape }}"
+      data-title="{{ page.entry.title | strip_html | xml_escape }}"
+    >
       {{ page.entry.title }}
     </h1>
-
   </header>
 
   <!-- Post content -->
   <div class="post-content">
-
     <small>
-    <em>
-      {% assign authorCount = page.entry.author_array | size %}
-      {% assign hasStars = false %}
-      by
-      {% for author in page.entry.author_array %}
+      <em>
+        {% assign authorCount = page.entry.author_array | size %}
+        {% assign hasStars = false %} by
+        {% for author in page.entry.author_array %}
           {% capture name %}{{ author.first }} {{ author.last }}{% endcapture %}
-          {% if name contains "*" %}
-              {% assign hasStars = true %}
+          {% if name contains '*' %}
+            {% assign hasStars = true %}
           {% endif %}
-          {% if name contains "Sambit Panda" %}
-            {% capture name %}<strong>{{ name }}</strong>{% endcapture %}
+          {% if name contains 'Sambit Panda' %}
+            {% capture name %}<strong
+          >{{ name }}</strong
+        >{% endcapture %}
           {% endif %}
           {% if authorCount == 1 %}
-              {{ name }}
+            {{ name }}
           {% else %}
-              {% if forloop.last %}
-                  and {{ name }}
-              {% else %}
-                  {{ name }}, 
-              {% endif %}
+            {% if forloop.last %}
+              and {{ name }}
+            {% else %}
+              {{ name }},
+            {% endif %}
           {% endif %}
-      {% endfor %}
-      <br />
-      {% case page.entry.type %}
-          {% when "article" %}
-          in {{ page.entry.journal }}
-          {% when "misc" %}
-          in {{ page.entry.publisher }}
-          {% when "thesis", "phdthesis" %}
-          in {{ page.entry.school }}
-      {% endcase %}
-      on {{ page.entry.month | date: "%B" }}, {{ page.entry.year }}
-      {% if hasStars %}
-        <br /><br />
-        *Equal Contribution
-      {% endif %}
-    </em>
+        {% endfor %}
+        <br>
+        in
+        {% case page.entry.type %}
+          {% when 'article' %}
+            {{ page.entry.journal }}
+          {% when 'misc' %}
+            {{ page.entry.publisher }}
+          {% when 'thesis', 'phdthesis' %}
+            {{ page.entry.school }}
+        {% endcase %}
+        on {{ page.entry.month | date: '%B' }}, {{ page.entry.year }}
+        {% if hasStars %}
+          <br>
+          <br>
+          *Equal Contribution
+        {% endif %}
+      </em>
     </small>
 
     <center>
       <div class="largetype">
         {% case page.entry.type %}
-            {% when "article" %}
+          {% when 'article' %}
             <a href="http://doi.org/{{ page.entry.doi }}">Paper</a>
-            {% when "misc" %}
+          {% when 'misc' %}
             <a href="http://doi.org/{{ page.entry.doi }}">{{ page.entry.publisher }}</a>
-            {% when "thesis", "phdthesis" %}
+          {% when 'thesis', 'phdthesis' %}
             <a href="{{ page.entry.url }}">Thesis</a>
         {% endcase %}
         {% if page.entry.links %}
-          {% assign link_value = page.entry.links | split: ", " %}
+          {% assign link_value = page.entry.links | split: ', ' %}
           {% for link in link_value %}
-            {% unless page.entry.type == "other" and forloop.first %}
-              &#x30FB; 
+            {% unless page.entry.type == 'other' and forloop.first %}
+              &#x30FB;
             {% endunless %}
-            {% assign link_value = link | split: ": " %}
+            {% assign link_value = link | split: ': ' %}
             <a href="{{ link_value | slice: 1 }}">{{ link_value | slice: 0 }}</a>
           {% endfor %}
         {% endif %}
@@ -90,12 +93,10 @@ usemathjax: true
       <h2>Summary</h2>
     {% endif %}
     <p>{{ page.entry.abstract | markdownify }}</p>
-    
-    {% unless page.entry.type == "other" %}
+
+    {% unless page.entry.type == 'other' %}
       <h2>Citation</h2>
       <pre>{{ page.entry.bibtex }}</pre>
     {% endunless %}
   </div>
-
 </article>
-

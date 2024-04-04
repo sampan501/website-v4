@@ -8,15 +8,16 @@ desc: |
   You see my work by year below, or you can <a href="/research/topic">browse by topic</a> or <a href="/research">by type</a>.
   A full list is also available <a href="https://scholar.google.com/citations?user=-V3CmPoAAAAJ&hl=en">on Google Scholar</a>.
 ---
-
 <div class="grid-container">
-{% for y in page.years %}
-  <div class="grid-item"><a href="#{{y}}">{{ y }}</a></div>
-{% endfor %}
+  {% for y in page.years %}
+    <div class="grid-item">
+      <a href="#{{y}}">{{ y }}</a>
+    </div>
+  {% endfor %}
 </div>
 
 {% for y in page.years %}
-  <h2 id={{y}}>{{y}}</h2>
+  <h2 id="{{y}}">{{ y }}</h2>
   <section class="list">
     {% bibliography -q @*[year={{y}}]* %}
   </section>
