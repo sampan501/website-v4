@@ -7,15 +7,35 @@
 // By default all heading levels have the same font size, but many people may
 // not like this, so here's an alternative font size stack:
 .content {
-  h2 { font-size: 225%; font-weight: bold; opacity: 1; }
-  h3 { font-size: 140%; font-weight: bold;  opacity: 1; }
-  h4, h5, h6 { font-size: 100%; font-weight: bold;  opacity: 1; }
+  h2 {
+    font-size: 250%;
+    font-weight: bold;
+    opacity: 1;
+  }
+  h3 {
+    font-size: 140%;
+    font-weight: bold;
+    opacity: 1;
+  }
+  h4,
+  h5,
+  h6 {
+    font-size: 100%;
+    font-weight: bold;
+    opacity: 1;
+  }
 }
 
 // EXAMPLE: alternative post title color
 // This is useful when you're using the custom color scheme.
-.content { a { color: var(--link-color); } }
-.external span { background: var(--link-color); }
+.content {
+  a {
+    color: var(--link-color);
+  }
+}
+.external span {
+  background: var(--link-color);
+}
 
 // EXAMPLE: Custom typography for Chinese Traditional
 // :root {
@@ -29,7 +49,9 @@
   --link-color-s: 100%;
   --link-color-l: 35%;
   --code-color-h: calc(var(--link-color-h) + 10);
-  --code-color-s: calc(var(--link-color-s) * .2 + 40%);
+  --code-color-s: calc(var(--link-color-s) * 0.2 + 40%);
+  --grid-columns: 3;
+  --nav-item-space: 2em;
 }
 
 .list {
@@ -56,20 +78,20 @@
 }
 
 .content {
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
 
   .sub-title {
     font-size: 108%;
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 
 small {
   display: block;
-  margin-top: 1.5vmin;
+  margin-top: 0.5em;
 
   &:last-of-type {
-    margin-bottom: 5vmin;
+    margin-bottom: 2em;
   }
 }
 
@@ -79,7 +101,7 @@ small {
   background: var(--text-color-3);
   @include padding-offset(var(--space-header));
   @include margin-offset(calc(var(--space-header) * -1));
-  
+
   @media (max-width: $breakpoint-md) {
     --header-height: 52.5vh;
     --space-header: var(--space-md);
@@ -89,6 +111,13 @@ small {
 
   @media (max-width: $breakpoint-sm) {
     --space-header: var(--space-sm);
+    margin-bottom: 3rem;
+  }
+
+  li {
+    a {
+      padding: 0.5em var(--nav-item-space) 0em 0em;
+    }
   }
 }
 
@@ -100,27 +129,30 @@ small {
   padding: calc(2em + var(--nav-padding));
   @include padding-offset(var(--space-header));
   @include margin-offset(calc(var(--space-header) * -1));
-  
+
   @media (max-width: $breakpoint-md) {
     --header-height: 52.5vh;
     --space-header: var(--space-md);
-    // padding-top: 0;
-    // padding-bottom: 0;
   }
 
   @media (max-width: $breakpoint-sm) {
     --space-header: var(--space-sm);
   }
 
-  a {
-    color: var(--link-color);
-    font-weight: bold;
+  ul {
+    li {
+      a {
+        color: var(--link-color);
+        font-weight: bold;
+        padding: 0.5em var(--nav-item-space) 0em 0em;
+      }
+    }
   }
 }
 
 header {
   .profile-header {
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
 
   .profile-title {
@@ -143,16 +175,16 @@ header {
 .grid-container {
   display: grid;
   grid-column-gap: 2em;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
   margin: 1.8rem 0;
   padding: 0;
   list-style: none;
 
   @media (max-width: $breakpoint-sm) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(calc(var(--grid-columns) - 1), 1fr);
   }
 }
 
 .grid-item {
-  padding: .6em 0;
+  padding: 0.6em 0;
 }
