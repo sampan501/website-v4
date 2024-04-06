@@ -17,7 +17,7 @@
     line-height: 2;
 
     a {
-      padding: .5em var(--nav-item-space);
+      padding: 0.5em var(--nav-item-space);
 
       &:hover,
       &:focus {
@@ -30,7 +30,6 @@
 
 // Currently activated page or category class
 .current {
-
   a {
     color: var(--link-color);
   }
@@ -50,7 +49,6 @@ body:hover .latest {
 
   // Remove extra space for the last paragraph in the container
   article {
-
     // article > p
     > *:last-child {
       margin-bottom: 0 !important;
@@ -75,7 +73,6 @@ body:hover .latest {
   // Post / page content first element fix
   .post-content,
   .page-content {
-
     > *:first-child {
       margin-top: 0;
 
@@ -144,7 +141,8 @@ body:hover .latest {
         font-size: 280%;
       }
 
-      svg {}
+      svg {
+      }
 
       svg,
       img {
@@ -156,7 +154,7 @@ body:hover .latest {
         // img styles
         margin-left: 0;
         margin-right: 0;
-        margin-bottom: .3em;
+        margin-bottom: 0.3em;
 
         @media (max-width: $breakpoint-sm) {
           width: 100% !important;
@@ -214,7 +212,7 @@ body:hover .latest {
         margin-top: 0;
         margin-left: -4em;
         text-align: right;
-        opacity: .4;
+        opacity: 0.4;
         pointer-events: none;
       }
 
@@ -228,13 +226,13 @@ body:hover .latest {
 
   ul li::before {
     content: "-";
-    padding-right: .5em;
+    padding-right: 0.5em;
   }
 
   ol li::before {
     counter-increment: list;
     content: counter(list) ".";
-    padding-right: .25em;
+    padding-right: 0.25em;
   }
 
   dl {
@@ -245,13 +243,12 @@ body:hover .latest {
     }
 
     dt {
-
       &::before {
         position: absolute;
         width: 1em;
         margin-left: -1em;
         content: "-";
-        opacity: .6;
+        opacity: 0.6;
         pointer-events: none;
       }
     }
@@ -387,11 +384,14 @@ body:hover .latest {
       // Remove extra padding for the last element, re-apply margin
       &:last-of-type {
         padding-bottom: 0;
-        margin-bottom: .4em;
+        margin-bottom: 0.4em;
       }
 
       @media (max-width: $breakpoint-sm) {
-        @include padding-offset(calc(var(--space-sm) - var(--border-md)), var(--space-sm));
+        @include padding-offset(
+          calc(var(--space-sm) - var(--border-md)),
+          var(--space-sm)
+        );
         @include margin-offset(calc(var(--space-sm) * -1));
       }
     }
@@ -406,7 +406,7 @@ body:hover .latest {
 
       &::before {
         // https://www.fileformat.info/info/unicode/char/2500/index.htm
-        content: "\2500\2500\00a0"
+        content: "\2500\2500\00a0";
       }
     }
   }
@@ -426,7 +426,7 @@ body:hover .latest {
       }
 
       &::-webkit-details-marker {
-        display: none
+        display: none;
       }
 
       &::before {
@@ -435,12 +435,14 @@ body:hover .latest {
         display: flex;
         justify-content: center;
         width: 1ex;
-        left: -.5em;
+        left: -0.5em;
         margin-top: 0;
         margin-left: -1ex;
         text-align: right;
-        opacity: .4;
-        transition: opacity .2s ease, transform .2s ease;
+        opacity: 0.4;
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
         transform-origin: center center;
         font-feature-settings: "case";
       }
@@ -559,7 +561,6 @@ body:hover .latest {
 
   // Newsletter subscription form in page "store"
   form {
-
     input {
       display: block;
       width: 100%;
@@ -572,7 +573,7 @@ body:hover .latest {
       // Remove border-radius for iOS devices
       border-radius: 0;
       outline: none;
-      transition: padding .2s ease;
+      transition: padding 0.2s ease;
 
       &:focus {
         border-color: var(--text-color);
@@ -584,9 +585,7 @@ body:hover .latest {
   input,
   textarea,
   select {
-
     &:focus:required:invalid {
-
       &:focus {
         color: var(--link-color);
         border-color: var(--link-color);
@@ -623,7 +622,7 @@ body:hover .latest {
     th,
     td {
       --space-table-cell: var(--space-xs);
-      padding: .6em var(--space-xs);
+      padding: 0.6em var(--space-xs);
 
       &:first-child {
         padding-left: var(--space-table-cell);
@@ -659,7 +658,6 @@ body:hover .latest {
   text-align: justify;
 
   header {
-
     &,
     & * {
       text-align: start;
@@ -667,7 +665,6 @@ body:hover .latest {
   }
 
   ruby {
-
     rt {
       text-align: start;
     }
@@ -677,7 +674,7 @@ body:hover .latest {
 // Post date margin fix
 .post-modified-date {
   font-size: 75%;
-  opacity: .5;
+  opacity: 0.5;
 
   @media only percy {
     display: none;
@@ -695,9 +692,9 @@ body:hover .latest {
 .browser {
   position: relative;
   padding-top: 24px;
-  background: rgba(255, 255, 255, .1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 5px 5px 0 0;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, .05);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
 
   // Reset browser border-radius for small screens
   @media (max-width: $breakpoint-md), (max-width: $breakpoint-sm) {
@@ -715,11 +712,11 @@ body:hover .latest {
     border-radius: 50%;
     content: "";
     box-shadow:
-      16px 0 0 0   rgba(lighten(#fac536, 30%), .96),
-      32px 0 0 0   rgba(lighten(#26e93d, 30%), .96),
-         0 0 0 1px rgba(darken(#f24e59, 30%), .3),
-      16px 0 0 1px rgba(darken(#fac536, 30%), .3),
-      32px 0 0 1px rgba(darken(#26e93d, 30%), .3);
+      16px 0 0 0 rgba(lighten(#fac536, 30%), 0.96),
+      32px 0 0 0 rgba(lighten(#26e93d, 30%), 0.96),
+      0 0 0 1px rgba(darken(#f24e59, 30%), 0.3),
+      16px 0 0 1px rgba(darken(#fac536, 30%), 0.3),
+      32px 0 0 1px rgba(darken(#26e93d, 30%), 0.3);
   }
 
   img {
@@ -728,7 +725,7 @@ body:hover .latest {
     margin-right: 0;
     width: auto;
     max-width: 100%;
-    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, .05);
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -751,7 +748,10 @@ body:hover .latest {
   border-left: var(--border-md) solid var(--link-color);
 
   @media (max-width: $breakpoint-sm) {
-    @include padding-offset(calc(var(--space-sm) - var(--border-md)), var(--space-sm));
+    @include padding-offset(
+      calc(var(--space-sm) - var(--border-md)),
+      var(--space-sm)
+    );
     @include margin-offset(calc(var(--space-sm) * -1));
   }
 }
@@ -763,7 +763,6 @@ body:hover .latest {
 }
 
 :target {
-
   // Redcarpet-style
   [rev=footnote],
   [rel=footnote],
@@ -778,7 +777,7 @@ body:hover .latest {
 // Post list in "work" and "note"
 .list {
   display: block;
-  margin: 0 0 .4rem;
+  margin: 0 0 0.4rem;
 
   .title {
     @include heading();
@@ -800,16 +799,15 @@ body:hover .latest {
     display: inline-block;
     height: 1em;
     width: 1em;
-    margin: 0 .05em 0 -1.215em;
+    margin: 0 0.05em 0 -1.215em;
     vertical-align: -0.1em;
     @media (max-width: $breakpoint-sm) {
       // Hide external link for post list
-      margin: 0 .05em 0 0;
+      margin: 0 0.05em 0 0;
     }
   }
 
   .external {
-
     @media (max-width: $breakpoint-sm) {
       // Hide external link for post list
       display: none;
@@ -819,16 +817,15 @@ body:hover .latest {
 
 // A dot symbol for external links
 .external {
-
   .dot {
     display: inline-block;
-    width: .7rem;
-    height: .7rem;
-    margin: 0 .1em;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin: 0 0.1em;
     vertical-align: middle;
     background: var(--text-color);
     border-radius: 50%;
-    transition: transform .4s ease;
+    transition: transform 0.4s ease;
 
     // Extra margin for external symbol in singular
     &--post {
@@ -838,7 +835,6 @@ body:hover .latest {
 
   &:hover,
   &:focus {
-
     .dot {
       transform: scale(1.4);
     }
@@ -858,13 +854,12 @@ body:hover .latest {
   text-transform: lowercase;
 
   ul {
-
     li {
       display: inline-block;
       line-height: 1.8;
 
       a {
-        padding: .5em var(--nav-item-space);
+        padding: 0.5em var(--nav-item-space);
       }
     }
   }
