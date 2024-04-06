@@ -44,11 +44,4 @@ In my free time, I like to read books and go on hikes!
 - [GitHub](https://github.com/sampan501)
 - [LinkedIn](https://www.linkedin.com/in/sampan501/)
 - [Resume](/assets/pdf/Sambit%20Panda%20Resume.pdf)
-
-## Bio
-
-Sambit Panda is a Ph.D. candidate in the Department of Biomedical Engineering at Johns Hopkins University, where he is advised by Dr. Joshua T. Vogelstein.
-His research focuses on the following topics: causal inference, hypothesis testing, neuroscience, and random forest extensions.
-He received a MSE in Biomedical Engineering from Johns Hopkins in 2020, and he received a BS in Biomedical Engineering and Biology from North Carolina State University in 2018.
-He received the Goodnight Scholarship in 2018 and the National Institutes of Health T32-a Grant in 2020.
-He has also reviewed papers for SoftwareX and SciPy (2020, 2021) and chaired for SciPy (2020, 2021, 2023).
+- [Bio](/assets/txt/bio.txt)
