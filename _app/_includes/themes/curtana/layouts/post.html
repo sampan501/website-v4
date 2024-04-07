@@ -3,40 +3,60 @@
 
 <!-- Article wrapper, limit width -->
 <article lang="{{ amsf_page_lang }}">
-
   <!-- Post title -->
   <header {{ amsf_page_heading_bg }}>
-
-    <h1 id="page-title" class="{{ amsf_page_heading_class }}" title="{{ amsf_page_title | strip_html | xml_escape }}" data-title="{{ amsf_page_title | strip_html | xml_escape }}">
+    <h1
+      id="page-title"
+      class="{{ amsf_page_heading_class }}"
+      title="{{ amsf_page_title | strip_html | xml_escape }}"
+      data-title="{{ amsf_page_title | strip_html | xml_escape }}"
+    >
       {{ amsf_page_heading }}
     </h1>
-
   </header>
 
   <!-- Post content -->
   <div class="post-content">
-
     {% if page.date %}
       <small>
-      <em>on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></em>
+        <em
+          >on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></em
+        >
       </small>
     {% endif %}
 
     {{ content }}
 
-    {% assign date_publish = page.date | date: "%b %-d, %Y" %}
-    {% assign date_update  = page.last_modified_at | date: "%b %-d, %Y" %}
+    {% assign date_publish = page.date | date: '%b %-d, %Y' %}
+    {% assign date_update = page.last_modified_at | date: '%b %-d, %Y' %}
 
-    {% if date_publish != date_update and site.dev == false and page.category != "research" %}
+    {% if date_publish != date_update and site.dev == false and page.category != 'research' %}
       <footer class="post-modified-date">
         <p>
           Updated
           <time datetime="{{ page.last_modified_at | date: " %FT%X+08:00 " }}">
-            {{ page.last_modified_at | date: "%A, %b %d, %Y" }}
+            {{ page.last_modified_at | date: '%A, %b %d, %Y' }}
           </time>
         </p>
       </footer>
     {% endif %}
   </div>
 
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="sampan501/sampan.me"
+    data-repo-id="R_kgDOJfnuIQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOJfnuIc4CXHry"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
 </article>
