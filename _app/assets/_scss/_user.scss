@@ -13,7 +13,7 @@
     opacity: 1;
   }
   h3 {
-    font-size: 140%;
+    font-size: 150%;
     font-weight: bold;
     opacity: 1;
   }
@@ -116,7 +116,7 @@ small {
 
   li {
     a {
-      padding: 0.5em var(--nav-item-space) 0em 0em;
+      padding: 0.25em var(--nav-item-space) 0.25em 0em;
     }
   }
 }
@@ -124,7 +124,7 @@ small {
 .footer {
   --space-header: var(--space-lg);
   background: var(--text-color-3);
-  text-align: center;
+  text-align: left;
   text-transform: none;
   padding: calc(2em + var(--nav-padding));
   @include padding-offset(var(--space-header));
@@ -144,7 +144,7 @@ small {
       a {
         color: var(--link-color);
         font-weight: bold;
-        padding: 0.5em var(--nav-item-space) 0em 0em;
+        padding: 0.5em calc(var(--nav-item-space) / 2) 0.5em 0em;
       }
     }
   }
@@ -187,4 +187,26 @@ header {
 
 .grid-item {
   padding: 0.6em 0;
+}
+
+svg {
+  /* Place the icon on the text baseline. */
+  position: relative;
+  top: 0.125em;
+
+  /* Prevent the icon from shrinking inside a flex container. */
+  flex-shrink: 0;
+
+  /* Scale the icon to match the font-size. */
+  height: 1em;
+  width: 1em;
+
+  /* Let the icon take whatever color the parent has. */
+  fill: currentColor;
+
+  /*
+     * If the icon is used on a link, which has a color transition,
+     * we can also transition the fill.
+    */
+  transition: fill 0.3s;
 }

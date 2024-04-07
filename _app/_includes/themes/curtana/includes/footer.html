@@ -13,12 +13,23 @@
         {%- assign item_url = amsf_relative_url -%}
         {%- assign lowercased_title = item.title | slugify -%}
         <li>
+          <a href="{{ item_url }}">{{ item.title }} {{ item.icon }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <br />
+    <ul>
+      {% for item in site.data.header %}
+        {%- include amsf/relative_url url=item.url -%}
+        {%- assign item_url = amsf_relative_url -%}
+        {%- assign lowercased_title = item.title | slugify -%}
+        <li>
           <a href="{{ item_url }}">{{ item.title }}</a>
         </li>
       {% endfor %}
     </ul>
     <br />
-    <p>© 2019 - {{ 'now' | date: "%Y" }} Sambit Panda</p>
+    <p>© 2019-{{ 'now' | date: "%Y" }} Copyright Sambit Panda. All rights reserved.</p>
   </footer>
 {% endunless %}
 
