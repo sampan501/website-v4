@@ -6,14 +6,8 @@
 # {{ author.email }}: used in atom feed, homepage
 # {{ author.web }}: used in atom feed
 # {{ author.twitter }}: used by Twitter Cards
-default:
+me:
   name: Sambit Panda
   email: sampanda501@gmail.com
   web: https://sampan.me/
   twitter: sampan501
-
-tester:
-  name: Tester
-  email: test@test.com
-  web: https://example.com/
-  twitter: tester

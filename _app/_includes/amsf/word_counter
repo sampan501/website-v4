@@ -38,13 +38,13 @@
       {%- if amsf_page_reading_time_hr == 1 -%}
         hr
       {%- else -%}
-        hrs
+        hr
       {%- endif -%}
     {%- endcapture -%}
 
     {%- capture amsf_page_reading_time_min_unit -%}
       {%- if amsf_page_reading_time_min > 1 -%}
-        mins
+        min
       {%- elsif amsf_page_reading_time_min == 1 -%}
         min
       {%- endif -%}
@@ -58,6 +58,6 @@
 
     {{ amsf_page_reading_time_hr }} {{ amsf_page_reading_time_hr_unit | strip }} {{ amsf_page_reading_time_min_figure | strip }} {{ amsf_page_reading_time_min_unit | strip }}
   {%- else -%}
-    {{ amsf_page_reading_time_raw }} mins
+    {{ amsf_page_reading_time_raw }} min
   {%- endif -%}
 {%- endcapture -%}

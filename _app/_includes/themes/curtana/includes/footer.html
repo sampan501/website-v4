@@ -1,35 +1,33 @@
 <!-- Footer section -->
 {% unless page.permalink == '/' and site.data.curtana.clean_homepage %}
   <footer class="footer">
-    <ul>
-      {% if site.credits %}
-        <li>
-          <a href="https://sparanoid.com/lab/amsf/" title="Almace Scaffolding with theme {{ site.data.curtana.meta.name }}">AMSF</a>
-        </li>
-      {% endif %}
-
-      {% for item in site.data.footer %}
-        {%- include amsf/relative_url url=item.url -%}
-        {%- assign item_url = amsf_relative_url -%}
-        {%- assign lowercased_title = item.title | slugify -%}
-        <li>
-          <a href="{{ item_url }}">{{ item.title }} {{ item.icon }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-    <br />
-    <ul>
-      {% for item in site.data.header %}
-        {%- include amsf/relative_url url=item.url -%}
-        {%- assign item_url = amsf_relative_url -%}
-        {%- assign lowercased_title = item.title | slugify -%}
-        <li>
-          <a href="{{ item_url }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-    <br />
-    <p>© Copyright 2019-{{ 'now' | date: "%Y" }} Sambit Panda. All rights reserved.</p>
+    <div class="links">
+      <ul>
+        {%- for item in site.data.footer -%}
+          {%- include amsf/relative_url url=item.url -%}
+          {%- assign item_url = amsf_relative_url -%}
+          {%- assign lowercased_title = item.title | slugify -%}
+          <li>
+            <a href="{{ item_url }}">{{ item.title }} {{ item.icon }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    <div class="links">
+      <ul>
+        {%- for item in site.data.header -%}
+          {%- include amsf/relative_url url=item.url -%}
+          {%- assign item_url = amsf_relative_url -%}
+          {%- assign lowercased_title = item.title | slugify -%}
+          <li>
+            <a href="{{ item_url }}">{{ item.title }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    <div class="links">
+      <p>© Copyright 2019-{{ 'now' | date: "%Y" }} Sambit Panda. All rights reserved.</p>
+    </div>
   </footer>
 {% endunless %}
 

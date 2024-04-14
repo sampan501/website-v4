@@ -6,42 +6,42 @@
 #
 # Jekyll basic configurations
 #
-source:         _app
-destination:    _site
-timezone:       America/New_York
-permalink:      /:title.html
-markdown:       kramdown
-highlighter:    rouge
-include:        ["_pages"]
-exclude:        ["_pages/themes"]
+source: _app
+destination: _site
+timezone: America/New_York
+permalink: /:title.html
+markdown: kramdown
+highlighter: rouge
+include: ["_pages"]
+exclude: ["_pages/themes"]
 
 #
 # Jekyll serve settings
 #
-port:           4321
+port: 4321
 
 #
 # Jekyll build settings
 #
-future:         false
+future: false
 
 #
 # Markdown settings
 #
 kramdown:
-  input:                     GFM
-  auto_ids:                  true
-  footnote_nr:               1
-  entity_output:             as_char
-  toc_levels:                1..6
-  smart_quotes:              lsquo,rsquo,ldquo,rdquo
-  enable_coderay:            false
-  hard_wrap:                 false
-  syntax_highlighter:        rouge
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  hard_wrap: false
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    css_class:               "highlight"
+    css_class: "highlight"
   transliterated_header_ids: true
-  footnote_backlink:         "&#8617;&#xfe0e;"
+  footnote_backlink: "&#8617;&#xfe0e;"
 
 #
 # Jekyll plugins
@@ -53,13 +53,15 @@ plugins:
 
 # jekyll-scholar config
 scholar:
+  style: science
   source: ./assets/bib
   bibliography: "research.bib"
   bibliography_template: bib
   sort_by: year, month
   order: descending
   # HTML tag used for list of bibliography entries
-  bibliography_list_tag: 'ul'
+  bibliography_list_tag: "ul"
+  reference_tagname: "li"
 
   details_dir: _layouts
   details_layout: bibtex.html
@@ -78,12 +80,12 @@ scholar:
 # need to change it.
 #
 # Default:      false
-dev:            false
+dev: false
 
 # Site name
 #
 # Default:      Almace Scaffolding
-name:           Sambit Panda
+name: Sambit Panda
 
 # Site short name
 #
@@ -99,14 +101,14 @@ name:           Sambit Panda
 # - name_short: Sparanoid
 #
 # Default:      AMSF
-name_short:     SP
+name_short: SP
 
 # Site description
 #
 # Will be used in the document meta and Atom feed subtitle
 #
 # Default:      Super-fast Jekyll framework
-description:    Sambit Panda is a Biomedical Engineering PhD Candidate at Johns Hopkins.
+description: Sambit Panda is a Biomedical Engineering PhD Candidate at Johns Hopkins.
 
 # Base URL
 #
@@ -116,7 +118,7 @@ description:    Sambit Panda is a Biomedical Engineering PhD Candidate at Johns 
 # `/my-project`, without trailing slash.
 #
 # Default:      ""
-baseurl:        ""
+baseurl: ""
 
 # Flatten base
 #
@@ -126,19 +128,19 @@ baseurl:        ""
 # enable this option if you're using GitHub Pages.
 #
 # Default:      false
-flatten_base:   false
+flatten_base: false
 
 # CSS path used in templates
 #
 # Default:      /assets
-assets:         /assets
+assets: /assets
 
 # Feed URL
 #
 # Define your main feed URL, this will be only used in your templates
 #
 # Default:      /feed.xml
-feed:           /feed.xml
+feed: /feed.xml
 
 # Site full URL
 #
@@ -146,7 +148,7 @@ feed:           /feed.xml
 # URLs for these fields
 #
 # Default:      https://sparanoid.com
-url:            https://sampan.me
+url: https://sampan.me
 
 # Media assets URL
 #
@@ -175,25 +177,25 @@ url:            https://sampan.me
 #
 # Used by Safari mask-icon, Chrome Web App theme color
 colors:
-  theme:        "#007ab3"
-  background:   "#fff"
+  theme: "#007ab3"
+  background: "#fff"
 
 # Service Worker Precache
 service_worker:
-  enabled:      true
-  max_size:     120000
+  enabled: true
+  max_size: 120000
   files:
     - "**/*.{css,html,jpg,gif,png,svg,woff,woff2}"
     - "**/js/**.js"
 
 # Google Analytics tracking code
 google_analytics:
-  enabled:      false
-  id:           UA-xxxxxxx
-  url:          https://www.google-analytics.com/analytics.js
+  enabled: false
+  id: UA-xxxxxxx
+  url: https://www.google-analytics.com/analytics.js
 
 # Site Twitter account handle
-twitter:        bitapanda
+twitter: bitapanda
 
 # Twitter Cards large images
 #
@@ -207,7 +209,7 @@ tc_large_image: true
 # Enable this will simply add <meta charset="utf-8"> to the head of your pages
 #
 # Default:      true
-force_utf_8:    true
+force_utf_8: true
 
 # Link blog
 #
@@ -215,21 +217,21 @@ force_utf_8:    true
 # basically change your <link> value to external link you defined in your posts)
 #
 # Default:      false
-link_blog:      false
+link_blog: false
 
 # Excerpts for RSS
 #
 # Change the value to true to use post excerpt for RSS feeds
 #
 # Default:      false
-rss_excerpt:    false
+rss_excerpt: true
 
 # Generator credits
 #
 # Show or hide generator credits, require theme support
 #
 # Default:      true
-credits:        false
+credits: false
 
 # Custom records in robots.txt
 #
@@ -241,4 +243,4 @@ credits:        false
 #   - "Disallow: /log/"
 #
 # Default:      "User-agent: *"
-robots:         "User-agent: *"
+robots: "User-agent: *"
