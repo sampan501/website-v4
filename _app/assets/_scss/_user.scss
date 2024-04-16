@@ -52,6 +52,7 @@
   --code-color-s: calc(var(--link-color-s) * 0.2 + 40%);
   --grid-columns: 3;
   --nav-item-space: 2em;
+  --line-height: calc(20 / 15); // ~ 1.428571429
 }
 
 .list {
@@ -83,14 +84,6 @@
   .sub-title {
     font-size: 108%;
     opacity: 0.8;
-  }
-
-  header {
-    small {
-      display: block;
-      margin-top: 1em;
-      margin-bottom: 0em;
-    }
   }
 }
 
@@ -165,7 +158,7 @@ small {
 
 header {
   .profile-header {
-    margin-bottom: 1em;
+    margin-bottom: 0em;
   }
 
   .profile-title {
@@ -267,6 +260,15 @@ svg {
   }
 }
 
+.linksbib-div {
+  max-width: fit-content;
+  margin-inline: auto;
+
+  @media (max-width: $breakpoint-sm) {
+    margin-inline: unset;
+  }
+}
+
 #linksbib {
   display: inline;
   list-style: none;
@@ -282,7 +284,7 @@ svg {
 
     &::after {
       content: "";
-      margin-right: 0.75em;
+      margin-right: 0.5em;
     }
 
     &:last-child {
