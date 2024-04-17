@@ -267,13 +267,11 @@ svg {
 }
 
 #linkslist {
-  display: inline;
   list-style: none;
   margin-left: 0em;
-  overflow-wrap: break-word;
 
   li {
-    display: inline;
+    display: inline-block;
     content: "";
 
     &::before {
