@@ -31,12 +31,12 @@ amsf_page_theme_color }};" {% endif %} {% endcapture %}
         </a>
       </div>
       <small>
-        {%- if post.date -%}
+        {% if post.date %}
           <em
             >on
-            {{- date_publish -}}
+            {{ date_publish }}
           </em>
-        {%- endif -%}
+        {% endif %}
         {%- if post.tags -%}
           <em>
             in&nbsp;

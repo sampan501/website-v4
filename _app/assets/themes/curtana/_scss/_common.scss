@@ -126,6 +126,7 @@ body:hover .latest {
 
     @media (max-width: $breakpoint-sm) {
       --space-header: var(--space-sm);
+      margin-bottom: 0.5em;
     }
 
     h1 {

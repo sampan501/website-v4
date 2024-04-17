@@ -8,14 +8,26 @@
 // not like this, so here's an alternative font size stack:
 .content {
   h2 {
-    font-size: 250%;
+    font-size: 240%;
     font-weight: bold;
     opacity: 1;
+
+    @media (max-width: $breakpoint-sm) {
+      // Override viewport units defined in post.html
+      font-size: 187%; // 240/(360/180)
+      margin-top: 1em;
+    }
   }
   h3 {
-    font-size: 150%;
+    font-size: 120%;
     font-weight: bold;
     opacity: 1;
+
+    @media (max-width: $breakpoint-sm) {
+      // Override viewport units defined in post.html
+      font-size: 100%;
+      margin-top: 1em;
+    }
   }
   h4,
   h5,
@@ -23,6 +35,11 @@
     font-size: 100%;
     font-weight: bold;
     opacity: 1;
+
+    @media (max-width: $breakpoint-sm) {
+      // Override viewport units defined in post.html
+      margin-top: 1em;
+    }
   }
 }
 
@@ -52,7 +69,7 @@
   --code-color-s: calc(var(--link-color-s) * 0.2 + 40%);
   --grid-columns: 3;
   --nav-item-space: 2em;
-  --line-height: calc(20 / 15); // ~ 1.428571429
+  --line-height: calc(20 / 15);
 }
 
 .list {
@@ -74,12 +91,20 @@
       display: block;
       margin-top: 1.2vmin;
       line-height: 1.5;
+
+      @media (max-width: $breakpoint-sm) {
+        margin-bottom: 2em;
+      }
     }
   }
 }
 
 .content {
   margin-bottom: 6rem;
+
+  @media (max-width: $breakpoint-sm) {
+    margin-bottom: 1em;
+  }
 
   .sub-title {
     font-size: 108%;
@@ -93,6 +118,10 @@ small {
 
   &:last-of-type {
     margin-bottom: 2em;
+
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: 1em;
+    }
   }
 }
 
@@ -111,7 +140,7 @@ small {
   @media (max-width: $breakpoint-sm) {
     --nav-item-space: 1em;
     --space-header: var(--space-sm);
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 
   li {
@@ -169,10 +198,14 @@ header {
 
   .profile-img {
     display: inline-block;
-    max-width: 8em;
+    max-width: 7em;
     height: auto;
     margin: 0 1em 0 0;
     border-radius: 50%;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    margin-top: 0em;
   }
 }
 
@@ -300,7 +333,7 @@ svg {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 2em;
+  margin-top: 1em;
   margin-bottom: 3em;
 
   div {
@@ -317,19 +350,10 @@ svg {
   }
 }
 
-.unsighted {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  word-wrap: normal !important;
-}
-
 .no-heading2 {
   margin: 2em 0 0;
+
+  @media (max-width: $breakpoint-sm) {
+    margin: 1em 0 0;
+  }
 }

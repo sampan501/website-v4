@@ -38,7 +38,7 @@ body {
   hanging-punctuation: first allow-end;
   color: var(--text-color);
   background: var(--bg-color);
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 
   @media (max-width: $breakpoint-md) {
     --space-body: var(--space-md);
@@ -80,16 +80,24 @@ a,
 button {
   color: var(--text-color);
   text-decoration: none;
-  transition: color .5s ease, border-color .5s ease, background .5s ease, opacity 1.5s ease;
+  transition:
+    color 0.5s ease,
+    border-color 0.5s ease,
+    background 0.5s ease,
+    opacity 1.5s ease;
 
   &:hover,
   &:focus {
-    transition: color .1s ease, border-color .1s ease, background .1s ease, opacity .1s ease;
+    transition:
+      color 0.1s ease,
+      border-color 0.1s ease,
+      background 0.1s ease,
+      opacity 0.1s ease;
     text-decoration: underline;
   }
 
   &[disabled] {
-    opacity: .4;
+    opacity: 0.4;
     cursor: not-allowed;
   }
 }
@@ -113,7 +121,7 @@ del {
 
 ::placeholder {
   color: var(--text-color);
-  opacity: .2;
+  opacity: 0.2;
 }
 
 :focus::placeholder {

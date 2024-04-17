@@ -17,13 +17,33 @@
 
   <!-- Post content -->
   <div class="post-content">
-    {% if page.date %}
-      <small>
+    <small>
+      {% if page.date %}
         <em
           >on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time></em
         >
-      </small>
-    {% endif %}
+      {% endif %}
+      {%- if page.tags -%}
+        <em>
+          in&nbsp;
+          {%- for item in page.tags -%}
+            {%- if forloop.length >= 2 -%}
+              {%- unless forloop.last -%}
+                {%- unless forloop.first -%}
+                  ,&nbsp;
+                {%- endunless -%}
+              {%- else -%}
+                , and&nbsp;
+              {%- endunless -%}
+            {%- endif -%}
+            <a href="/blog/tag#{{item}}">{{- item -}}</a>
+          {%- endfor -%}
+        </em>
+      {%- endif -%}
+    </small>
+    {%- if page.desc -%}
+      <p>{{- page.desc -}}</p>
+    {%- endif -%}
 
     {{ content }}
 
@@ -40,6 +60,31 @@
         </p>
       </footer>
     {% endif %}
+  </div>
+
+  <hr>
+
+  <div class="post-nav">
+    <div>
+      {% if page.previous.url and page.previous.category == 'blog' %}
+        <p>
+          &larr; Previous<br>
+          <a href="{{page.previous.url}}">
+            {{ page.previous.title }}
+          </a>
+        </p>
+      {% endif %}
+    </div>
+    <div>
+      {% if page.next.url and page.next.category == 'blog' %}
+        <p>
+          Next &rarr;<br>
+          <a href="{{page.next.url}}">
+            {{ page.next.title }}
+          </a>
+        </p>
+      {% endif %}
+    </div>
   </div>
 
   <script
