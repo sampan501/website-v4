@@ -59,8 +59,8 @@ module.exports = (grunt) ->
     #     max_line_length:
     #       level: "ignore"
 
-      gruntfile:
-        src: ["Gruntfile.coffee"]
+      # gruntfile:
+      #   src: ["Gruntfile.coffee"]
 
     watch:
       options:
