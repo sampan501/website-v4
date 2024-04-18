@@ -16,6 +16,7 @@
       // Override viewport units defined in post.html
       font-size: 187%; // 240/(360/180)
       margin-top: 1em;
+      margin-bottom: 0em;
     }
   }
   h3 {
@@ -27,6 +28,7 @@
       // Override viewport units defined in post.html
       font-size: 100%;
       margin-top: 1em;
+      margin-bottom: 0em;
     }
   }
   h4,
@@ -39,6 +41,7 @@
     @media (max-width: $breakpoint-sm) {
       // Override viewport units defined in post.html
       margin-top: 1em;
+      margin-bottom: 0em;
     }
   }
 }
@@ -55,10 +58,11 @@
 }
 
 // EXAMPLE: Custom typography for Chinese Traditional
-// :root {
-//   --fontstack-sans-serif: "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
-//   --fontstack-serif: Georgia, "Hiragino Mincho ProN", serif;
-// }
+:root {
+  --fontstack-prefix: system-ui;
+  --fontstack-default: var(--fontstack-prefix), var(--fontstack-sans-serif);
+  --font-features: normal;
+}
 
 // EXAMPLE: amsf.github.io custom appearance
 :root {
@@ -198,7 +202,7 @@ header {
 
   .profile-img {
     display: inline-block;
-    max-width: 7em;
+    max-width: 8em;
     height: auto;
     margin: 0 1em 0 0;
     border-radius: 50%;
@@ -267,11 +271,12 @@ svg {
 }
 
 #linkslist {
+  display: inline;
   list-style: none;
   margin-left: 0em;
 
   li {
-    display: inline-block;
+    display: inline;
     content: "";
 
     &::before {
