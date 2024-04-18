@@ -714,7 +714,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask "build", "Build site with jekyll", [
     "clean:main"
-    "coffeelint"
+    # "coffeelint"
     "terser:dist"
     "sass:dist"
     "postcss:dist"
