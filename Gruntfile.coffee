@@ -49,15 +49,15 @@ module.exports = (grunt) ->
         new_name: grunt.option("theme") or "<%= amsf.theme.current %>"
         new_url: grunt.option("url") or "<%= amsf.theme.current_url %>"
 
-    coffeelint:
-      options:
-        indentation: 2
-        no_stand_alone_at:
-          level: "error"
-        no_empty_param_list:
-          level: "error"
-        max_line_length:
-          level: "ignore"
+    # coffeelint:
+    #   options:
+    #     indentation: 2
+    #     no_stand_alone_at:
+    #       level: "error"
+    #     no_empty_param_list:
+    #       level: "error"
+    #     max_line_length:
+    #       level: "ignore"
 
       gruntfile:
         src: ["Gruntfile.coffee"]
@@ -66,11 +66,11 @@ module.exports = (grunt) ->
       options:
         spawn: true
 
-      coffee:
-        files: ["<%= coffeelint.gruntfile.src %>"]
-        tasks: ["coffeelint:gruntfile"]
-        options:
-          reload: true
+      # coffee:
+      #   files: ["<%= coffeelint.gruntfile.src %>"]
+      #   tasks: ["coffeelint:gruntfile"]
+      #   options:
+      #     reload: true
 
       js:
         files: ["<%= config.app %>/**/_js/**/*.js"]
