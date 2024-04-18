@@ -57,9 +57,8 @@
   background: var(--link-color);
 }
 
-// EXAMPLE: Custom typography for Chinese Traditional
+// EXAMPLE: Custom typography
 :root {
-  --fontstack-prefix: system-ui;
   --fontstack-default: var(--fontstack-prefix), var(--fontstack-sans-serif);
   --font-features: normal;
 }
@@ -360,4 +359,11 @@ svg {
   @media (max-width: $breakpoint-sm) {
     margin: 1em 0 0;
   }
+}
+
+.details {
+  display: none;
+  // pointer-events: none;
+  // cursor: default;
+  // text-decoration: none;
 }

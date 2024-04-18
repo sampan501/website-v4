@@ -66,7 +66,6 @@ scholar:
   details_dir: _layouts
   details_layout: bibtex.html
   details_permalink: /:key:extension
-  details_link: ""
   bibtex_skip_fields: ["abstract", "month_numeric", "keywords", "links"]
 
 #
