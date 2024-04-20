@@ -167,7 +167,7 @@ body:hover .latest {
     // Reset subheading in page title (used by AMSF atm)
     h2 {
       font-weight: normal;
-      margin: 1.2vmin 0 0;
+      margin-top: 0.25em;
     }
 
     // Hide actual text if post title is image or SVG, the actual text helps
@@ -179,7 +179,11 @@ body:hover .latest {
 
     small {
       display: block;
-      margin-top: 2vmin;
+      margin-top: 0.5em;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 
