@@ -16,6 +16,12 @@
   {% assign authorCount = entry.author_array | size %} by
   {% for author in entry.author_array %}
     {% capture name %}{{ author.first }} {{ author.last }}{% endcapture %}
+    {% if entry.contribution %}
+      {% assign contrib_names = entry.contribution | split: ', ' %}
+      {% if contrib_names contains name %}
+        {% capture name %}{{ name }}*{% endcapture %}
+      {% endif %}
+    {% endif %}
     {% if name contains site.data.authors.me.name %}
       {% capture name %}<strong>{{ name }}</strong>{% endcapture %}
     {% endif %}
