@@ -369,12 +369,9 @@ svg {
 .emoji-title {
   display: inline-block;
   cursor: default;
-  // height: auto;
-  // width: 1em;
   margin-left: -1.1em;
   margin-right: 0;
   @media (max-width: $breakpoint-sm) {
-    // Hide external link for post list
     margin-left: 0;
   }
 }

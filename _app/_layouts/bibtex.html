@@ -83,15 +83,6 @@ usemathjax: true
                 <a href="{{ link_value | slice: 1 }}">{{- link_value | slice: 0 -}}</a>
               </li>
             {%- endfor -%}
-            <!--
-              {% for link in link_value %}
-                {% unless page.entry.type == 'other' and forloop.first %}
-
-                {% endunless %}
-                {% assign link_value = link | split: ': ' %}
-                <a href="{{ link_value | slice: 1 }}">{{ link_value | slice: 0 }}</a>
-              {% endfor %}
-            -->
           {%- endif -%}
         </ul>
       </div>
@@ -106,7 +97,9 @@ usemathjax: true
 
     {% unless page.entry.type == 'other' %}
       <h2>Citation</h2>
-      <pre>{{ page.entry.bibtex }}</pre>
+      <p>
+        <pre>{{ page.entry.bibtex }}</pre>
+      </p>
     {% endunless %}
   </div>
 </article>
