@@ -60,7 +60,7 @@
 // EXAMPLE: Custom typography
 :root {
   --fontstack-default: var(--fontstack-prefix), var(--fontstack-sans-serif);
-  --font-features: normal;
+  --font-features: "liga";
 }
 
 // EXAMPLE: amsf.github.io custom appearance
@@ -79,6 +79,7 @@
   .title {
     @media (max-width: $breakpoint-sm) {
       overflow-wrap: break-word;
+      font-size: 160%;
     }
   }
 
@@ -365,68 +366,15 @@ svg {
   display: none;
 }
 
-@font-face {
-  font-family: "Nunito";
-  font-size-adjust: 0.53;
-  font-style: normal;
-  font-weight: 400;
-  src:
-    url("/assets/fonts/Nunito-Regular.woff2") format("woff2"),
-    url("/assets/fonts/Nunito-Regular.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Nunito";
-  font-size-adjust: 0.53;
-  font-style: normal;
-  font-weight: 700;
-  src:
-    url("/assets/fonts/Nunito-Bold.woff2") format("woff2"),
-    url("/assets/fonts/Nunito-Bold.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Nunito";
-  font-size-adjust: 0.53;
-  font-style: italic;
-  font-weight: 400;
-  src:
-    url("../fonts/Nunito-Italic.woff2") format("woff2"),
-    url("../fonts/Nunito-Italic.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Asap";
-  font-size-adjust: 0.53;
-  font-style: normal;
-  font-weight: 400;
-  src:
-    url("/assets/fonts/Asap-Regular.woff2") format("woff2"),
-    url("/assets/fonts/Asap-Regular.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Asap";
-  font-size-adjust: 0.53;
-  font-style: normal;
-  font-weight: 700;
-  src:
-    url("/assets/fonts/Asap-Bold.woff2") format("woff2"),
-    url("/assets/fonts/Asap-Bold.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Asap";
-  font-size-adjust: 0.53;
-  font-style: italic;
-  font-weight: 400;
-  src:
-    url("../fonts/Asap-Italic.woff2") format("woff2"),
-    url("../fonts/Asap-Italic.woff") format("woff");
-  font-display: swap;
+.emoji-title {
+  display: inline-block;
+  cursor: default;
+  // height: auto;
+  // width: 1em;
+  margin-left: -1.1em;
+  margin-right: 0;
+  @media (max-width: $breakpoint-sm) {
+    // Hide external link for post list
+    margin-left: 0;
+  }
 }

@@ -46,14 +46,13 @@ usemathjax: true
           {% endif %}
         {% endfor %}
         <div class="description">
-          in
           {% case page.entry.type %}
             {% when 'article' %}
-              {{ page.entry.journal }}
+              in {{ page.entry.journal }}
             {% when 'misc' %}
-              {{ page.entry.publisher }}
+              in {{ page.entry.publisher }}
             {% when 'thesis', 'phdthesis' %}
-              {{ page.entry.school }}
+              in {{ page.entry.school }}
           {% endcase %}
           on {{ page.entry.month | date: '%B' }}, {{ page.entry.year }}
         </div>

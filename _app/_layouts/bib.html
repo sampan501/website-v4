@@ -3,20 +3,11 @@
 <div class="title">
   {% case entry.type %}
     {% when 'misc' %}
-      <img
-        alt="Emoji for misc entries in bibtex"
-        src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/1f4dd.svgz"
-      >
+      <span class="emoji-title">&#128221;</span>
     {% when 'article' %}
-      <img
-        alt="Emoji for article entries in bibtex"
-        src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/1f4c4.svgz"
-      >
+      <span class="emoji-title">&#128196;</span>
     {% when 'thesis', 'phdthesis' %}
-      <img
-        alt="Emoji for thesis entries in bibtex"
-        src="https://cdn.jsdelivr.net/gh/s9e/emoji-assets-twemoji/dist/svgz/1f393.svgz"
-      >
+      <span class="emoji-title">&#127891;</span>
   {% endcase %}
   <a href="{% details_link key %}">{{ entry.title }}</a>
 </div>
@@ -35,14 +26,13 @@
     {% endif %}
   {% endfor %}
   <div class="description">
-    in
     {% case entry.type %}
       {% when 'article' %}
-        <a href="http://doi.org/{{ entry.doi }}">{{ entry.journal }}</a>
+        in <a href="http://doi.org/{{ entry.doi }}">{{ entry.journal }}</a>
       {% when 'misc' %}
-        <a href="http://doi.org/{{ entry.doi }}">{{ entry.publisher }}</a>
+        in <a href="http://doi.org/{{ entry.doi }}">{{ entry.publisher }}</a>
       {% when 'thesis', 'phdthesis' %}
-        <a href="{{ entry.url }}">{{ entry.school }}</a>
+        in <a href="{{ entry.url }}">{{ entry.school }}</a>
     {% endcase %}
     on {{ entry.month | date: '%B' }}, {{ entry.year }}
   </div>

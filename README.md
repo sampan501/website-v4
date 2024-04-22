@@ -31,8 +31,11 @@ $ git push -u origin main
 
 ## Attributions
 
-I'd love to thank a number of websites and packages for helping me create this website. These include:
+I'd love to thank a number of websites that inspired the design of this website. These include:
 
-- [Almace Scaffolding](https://sparanoid.com/lab/amsf/) - The template which this website is adapted from
-- [Twemoji](https://twemoji.twitter.com/), [emoji-assets-twemoji](https://github.com/s9e/emoji-assets-twemoji) - Emoji icons used in the in the publications page
-- [jonbarron.info](https://jonbarron.info/), [tempertemper.net](https://www.tempertemper.net/), [stefanzweifel.dev/](https://stefanzweifel.dev/), [bdpedigo.github.io](https://bdpedigo.github.io/), [neurodata.io/about/jovo/](https://neurodata.io/about/jovo/) - Other's personal websites that were helpful in design/content
+- [Almace Scaffolding](https://sparanoid.com/lab/amsf/)
+- [tempertemper.net](https://www.tempertemper.net/)
+- [jonbarron.info](https://jonbarron.info/)
+- [stefanzweifel.dev/](https://stefanzweifel.dev/)
+- [bdpedigo.github.io](https://bdpedigo.github.io/)
+- [neurodata.io/about/jovo/](https://neurodata.io/about/jovo/)

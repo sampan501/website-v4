@@ -800,18 +800,6 @@ body:hover .latest {
     }
   }
 
-  img {
-    display: inline-block;
-    height: 1em;
-    width: 1em;
-    margin: 0 0.05em 0 -1.215em;
-    vertical-align: -0.1em;
-    @media (max-width: $breakpoint-sm) {
-      // Hide external link for post list
-      margin: 0 0.05em 0 0;
-    }
-  }
-
   .external {
     @media (max-width: $breakpoint-sm) {
       // Hide external link for post list
