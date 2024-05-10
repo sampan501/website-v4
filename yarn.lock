@@ -258,10 +258,10 @@
     line-column "^1.0.2"
     ohm-js "^16.3.0"
 
-"@shopify/prettier-plugin-liquid@^1.4.4":
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/@shopify/prettier-plugin-liquid/-/prettier-plugin-liquid-1.4.4.tgz#8f1344e8ce967407441a16d6f2f3af13089621b6"
-  integrity sha512-3mUpcie56y/AnjRtR+mWFFS/tojHAH3b9E01pVuFOCLrq5xwJjBY2aRKp8wrLSMhnn4sECU/qQ/hFfAtPrX6BA==
+"@shopify/prettier-plugin-liquid@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@shopify/prettier-plugin-liquid/-/prettier-plugin-liquid-1.5.0.tgz#6ced460aeb446c918ed995fc9f7df82ccbf44ceb"
+  integrity sha512-CuWjUnBCvq/RTmubEa5RfwW2oP2gYfTXaJ39t4apAYm//1v5Ftvv1bbhEnoEZwCjPshaAJLhSzP9dvCel4cebw==
   dependencies:
     "@shopify/liquid-html-parser" "^2.0.3"
     html-styles "^1.0.0"
