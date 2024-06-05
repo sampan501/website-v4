@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem "jekyll", "4.3.2"
 
 group :development do
-  gem "jekyll-last-modified-at"
+  gem "jekyll-last-modified-at", ">= 1.3.2"
   gem "stringex"
   gem "webrick"
 
