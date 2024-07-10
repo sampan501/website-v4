@@ -1,0 +1,26 @@
+---
+layout: page
+title: Blog by Tag
+permalink: /blog/tag
+tags: [Other, test1, test2, test3]
+desc: |
+  Welcome to my blog!
+  Here, I write about plain-language summaries of research papers and other things that interest me.
+  You see long list of my posts below, or you can <a href="/blog">browse as a long list</a> or <a href="/blog/year">by year</a>.
+---
+<div class="grid-container">
+  {% for t in page.tags %}
+    <div class="grid-item">
+      <a href="#{{t}}">{{ t }}</a>
+    </div>
+  {% endfor %}
+</div>
+
+{% for t in page.tags %}
+  <h2 id="{{t}}">{{ t }}</h2>
+  {% for post in site.categories.blog %}
+    {% if post.tags contains t %}
+      {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
+    {% endif %}
+  {% endfor %}
+{% endfor %}

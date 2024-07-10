@@ -1,0 +1,14 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+desc: |
+  Welcome to my blog!
+  Here, I write about plain-language summaries of research papers and other things that interest me.
+  You see long list of my posts below, or you can <a href="/blog/tag">browse by tag</a> or <a href="/blog/year">by year</a>.
+---
+<div class="no-heading2">
+  {% for post in site.categories.blog %}
+    {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
+  {% endfor %}
+</div>
