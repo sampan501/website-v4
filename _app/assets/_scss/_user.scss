@@ -71,7 +71,7 @@
   --code-color-h: calc(var(--link-color-h) + 10);
   --code-color-s: calc(var(--link-color-s) * 0.2 + 40%);
   --grid-columns: 3;
-  --nav-item-space: 2em;
+  --nav-item-space: 1em;
   --line-height: calc(20 / 15);
 }
 
@@ -133,7 +133,7 @@ small {
   --space-header: var(--space-lg);
   margin-bottom: 6rem;
   background: var(--text-color-3);
-  @include padding-offset(var(--space-header));
+  @include padding-offset(calc(var(--space-header) - var(--nav-item-space)));
   @include margin-offset(calc(var(--space-header) * -1));
 
   @media (max-width: $breakpoint-md) {
@@ -142,14 +142,14 @@ small {
   }
 
   @media (max-width: $breakpoint-sm) {
-    --nav-item-space: 1em;
+    --nav-item-space: 0.5em;
     --space-header: var(--space-sm);
     margin-bottom: 1rem;
   }
 
   li {
     a {
-      padding: 0.5em var(--nav-item-space) 0.5em 0em;
+      padding: 0.5em var(--nav-item-space);
     }
   }
 }
@@ -169,16 +169,17 @@ small {
   }
 
   @media (max-width: $breakpoint-sm) {
-    --nav-item-space: 1em;
+    --nav-item-space: 0.5em;
     --space-header: var(--space-sm);
   }
 
   ul {
+    margin-left: -1em;
     li {
       a {
         color: var(--link-color);
         font-weight: bold;
-        padding: 0.5em var(--nav-item-space) 0.5em 0em;
+        padding: 0.5em var(--nav-item-space);
       }
     }
   }
@@ -191,24 +192,31 @@ small {
 
 header {
   .profile-header {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: 1em;
+    }
   }
 
   .profile-title {
     display: inline-block;
     vertical-align: center;
-    // max-width: 100%;
   }
 
   .profile-img {
     display: inline;
-    max-width: 20%;
+    max-width: 22%;
     height: auto;
-    margin: 0 1em 0 0;
+    margin: 0 0.5em 0 0;
     border-radius: 50%;
 
+    @media (max-width: $breakpoint-md) {
+      max-width: 20%;
+    }
+
     @media (max-width: $breakpoint-sm) {
-      max-width: 25%;
+      max-width: 30%;
     }
   }
 
