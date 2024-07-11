@@ -202,13 +202,15 @@ header {
   .profile-title {
     display: inline-block;
     vertical-align: center;
+    margin-left: 1em;
   }
 
   .profile-img {
-    display: inline;
+    font-size: 0;
+    display: inline-block;
     max-width: 22%;
     height: auto;
-    margin: 0 0.5em 0 0;
+    margin: 0;
     border-radius: 50%;
 
     @media (max-width: $breakpoint-md) {
@@ -285,10 +287,10 @@ svg {
 #linkslist {
   display: inline;
   list-style: none;
-  margin-left: 0em;
+  margin-left: 0;
 
   li {
-    display: inline;
+    display: inline-block;
     content: "";
 
     &::before {
@@ -303,7 +305,7 @@ svg {
     &:last-child {
       &::after {
         content: "";
-        margin-right: 0em;
+        margin-right: 0;
       }
     }
   }
