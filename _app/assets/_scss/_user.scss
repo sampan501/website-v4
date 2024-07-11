@@ -203,6 +203,10 @@ header {
     display: inline-block;
     vertical-align: center;
     margin-left: 1em;
+
+    @media (max-width: $breakpoint-sm) {
+      margin-left: 0;
+    }
   }
 
   .profile-img {
@@ -299,15 +303,8 @@ svg {
     }
 
     &::after {
-      content: "";
+      content: " ";
       margin-right: 1em;
-    }
-
-    &:last-child {
-      &::after {
-        content: "";
-        margin-right: 0;
-      }
     }
   }
 }
