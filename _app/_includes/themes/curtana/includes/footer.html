@@ -8,25 +8,13 @@
           {%- assign item_url = amsf_relative_url -%}
           {%- assign lowercased_title = item.title | slugify -%}
           <li>
-            <a href="{{ item_url }}">{{ item.title }} {{ item.icon }}</a>
+            <a href="{{ item_url }}">{{- item.title -}} {{- item.icon -}}</a>
           </li>
         {%- endfor -%}
       </ul>
     </div>
-    <div class="links">
-      <ul>
-        {%- for item in site.data.header -%}
-          {%- include amsf/relative_url url=item.url -%}
-          {%- assign item_url = amsf_relative_url -%}
-          {%- assign lowercased_title = item.title | slugify -%}
-          <li>
-            <a href="{{ item_url }}">{{ item.title }}</a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    </div>
-    <div class="links">
-      <p>© Copyright 2019-{{ 'now' | date: "%Y" }} Sambit Panda. All rights reserved.</p>
+    <div class="copyright">
+      © 2019 - {{ 'now' | date: "%Y" }} Sambit Panda
     </div>
   </footer>
 {% endunless %}

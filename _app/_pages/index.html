@@ -26,8 +26,8 @@ thumb_force_logo: true
               {%- assign lowercased_title = item.title | slugify -%}
               <li>
                 <a href="{{ item_url }}">
-                  {{- item.title }}
-                  {{ item.icon -}}
+                  {{- item.title -}}
+                  {{- item.icon -}}
                 </a>
               </li>
             {%- endfor -%}
