@@ -16,7 +16,7 @@ $breakpoint-xs: 400px !default;
   --fontstack-sans-serif: "Helvetica Neue", Arial, sans-serif;
   --fontstack-serif: Georgia, serif;
   --fontstack-monospace: Menlo, Consolas, monospace;
-  --fontstack-default: var(--fontstack-prefix) var(--fontstack-sans-serif);
+  --fontstack-default: var(--fontstack-prefix), var(--fontstack-sans-serif);
   --font-size-base: 1rem;
   --font-size-factor: 1vw;
   --font-size: 1.6vw;
@@ -26,9 +26,10 @@ $breakpoint-xs: 400px !default;
   // - cv01: open six
   // - cv02: open nine
   // - cv03: open four
-  --font-features: "halt", "cv01", "cv02", "cv03";
-  --line-height: calc(20 / 14); // ~ 1.428571429
+  --font-features: "liga";
+  --line-height: calc(20 / 15);
   --heading-letter-spacing: -0.04em;
+  --grid-columns: 3;
 
   // Layout
   --breakpoint-lg: #{$breakpoint-lg};
@@ -47,7 +48,7 @@ $breakpoint-xs: 400px !default;
 
   // Nav
   --nav-padding: 0.75vmax;
-  --nav-item-space: 1.4vmax;
+  --nav-item-space: 1em;
 
   // Color - text color
   --text-color-h: 318;
@@ -82,9 +83,9 @@ $breakpoint-xs: 400px !default;
   );
 
   // Color - link color
-  --link-color-h: 318;
+  --link-color-h: 200;
   --link-color-s: 100%;
-  --link-color-l: 50%;
+  --link-color-l: 35%;
   --link-color-hsl: var(--link-color-h), var(--link-color-s),
     var(--link-color-l);
 
@@ -145,8 +146,8 @@ $breakpoint-xs: 400px !default;
   );
 
   // Color - code color
-  --code-color-h: calc(var(--link-color-h) + 30);
-  --code-color-s: calc(var(--link-color-s) * 0.2 + 30%);
+  --code-color-h: calc(var(--link-color-h) + 10);
+  --code-color-s: calc(var(--link-color-s) * 0.2 + 40%);
   --code-color-l: var(--link-color-l);
   --code-color-hsl: var(--code-color-h), var(--code-color-s),
     var(--code-color-l);
