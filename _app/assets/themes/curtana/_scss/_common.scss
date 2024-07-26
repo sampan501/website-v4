@@ -24,7 +24,6 @@
   @media (max-width: $breakpoint-sm) {
     --nav-item-space: 0.5em;
     --space-header: var(--space-sm);
-    margin-bottom: 1rem;
   }
 
   li {
@@ -916,6 +915,7 @@ body:hover .latest {
       display: none;
     }
   }
+
   ul {
     list-style-type: none;
     margin-left: 0;
