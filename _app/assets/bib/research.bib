@@ -121,7 +121,7 @@
   abstract = {Decision forests are widely used for classification and regression tasks. A lesser known property of tree-based methods is that one can construct a proximity matrix from the tree(s), and these proximity matrices are induced kernels. While there has been extensive research on the applications and properties of kernels, there is relatively little research on kernels induced by decision forests. We construct Kernel Mean Embedding Random Forests (KMERF), which induce kernels from random trees and/or forests using leaf-node proximity. We introduce the notion of an asymptotically characteristic kernel, and prove that KMERF kernels are asymptotically characteristic for both discrete and continuous data. Because KMERF is data-adaptive, we suspected it would outperform kernels selected a priori on finite sample data. We illustrate that KMERF nearly dominates current state-of-the-art kernel-based tests across a diverse range of high-dimensional two-sample and independence testing settings. Furthermore, our forest-based approach is interpretable, and provides feature importance metrics that readily distinguish important dimensions, unlike other high-dimensional non-parametric testing procedures. Hence, this work demonstrates the decision forest-based kernel can be more powerful and more interpretable than existing methods, flying in the face of conventional wisdom of the trade-off between the two.},
   archiveprefix = {arxiv},
   copyright = {All rights reserved},
-  keywords = {hypothesis,rf},
+  keywords = {hypothesis,forest,kernel},
   links = {Code: https://hyppo.neurodata.io/api/generated/hyppo.independence.kmerf#hyppo.independence.KMERF},
   selected = {true}
 }
@@ -177,7 +177,7 @@
   abstract = {Deep networks and decision forests (such as random forests and gradient boosted trees) are the leading machine learning methods for structured and tabular data, respectively. Many papers have empirically compared large numbers of classifiers on one or two different domains (e.g., on 100 different tabular data settings). However, a careful conceptual and empirical comparison of these two strategies using the most contemporary best practices has yet to be performed. Conceptually, we illustrate that both can be profitably viewed as "partition and vote" schemes. Specifically, the representation space that they both learn is a partitioning of feature space into a union of convex polytopes. For inference, each decides on the basis of votes from the activated nodes. This formulation allows for a unified basic understanding of the relationship between these methods. Empirically, we compare these two strategies on hundreds of tabular data settings, as well as several vision and auditory settings. Our focus is on datasets with at most 10,000 samples, which represent a large fraction of scientific and biomedical datasets. In general, we found forests to excel at tabular and structured data (vision and audition) with small sample sizes, whereas deep nets performed better on structured data with larger sample sizes. This suggests that further gains in both scenarios may be realized via further combining aspects of forests and networks. We will continue revising this technical report in the coming months with updated results.},
   archiveprefix = {arxiv},
   copyright = {All rights reserved},
-  keywords = {rf, neural-nets}
+  keywords = {forest,network}
 }
 
 @misc{xu2022simplest,
@@ -193,7 +193,7 @@
   abstract = {Decision forests, including random forests and gradient boosting trees, remain the leading machine learning methods for many real-world data problems, specifically on tabular data. However, current standard implementations only operate in batch mode, and therefore cannot incrementally update when more data arrive. Several previous works developed streaming trees and ensembles to overcome this limitation. Nonetheless, we found that those state-of-the-art algorithms suffer from a number of drawbacks, including poor performance on some problems and high memory usage on others. We therefore developed the simplest possible extension of decision trees we could think of: given new data, simply update existing trees by continuing to grow them, and replace some old trees with new ones to control the total number of trees. On three standard datasets, we illustrate that our approach, Stream Decision Forest (SDF), does not suffer from either of the aforementioned limitations. In a benchmark suite containing 72 classification problems (the OpenML-CC18 data suite), we illustrate that our approach often performs as well, and sometimes better even, than the batch mode decision forest algorithm. Thus, SDFs establish a simple standard for streaming trees and forests that could readily be applied to many real-world problems, including those with distribution drift and continual learning.},
   archiveprefix = {arxiv},
   copyright = {All rights reserved},
-  keywords = {rf}
+  keywords = {forest}
 }
 
 @other{niehsa,
