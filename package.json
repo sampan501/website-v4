@@ -28,7 +28,7 @@
     "@lodder/grunt-postcss": "3.1.1",
     "@lodder/time-grunt": "4.0.0",
     "@shopify/prettier-plugin-liquid": "^1.5.0",
-    "autoprefixer": "10.4.19",
+    "autoprefixer": "10.4.20",
     "coffeescript": "2.7.0",
     "grunt": "1.6.1",
     "grunt-assets-inline": "1.2.4",
