@@ -60,7 +60,7 @@
     "jit-grunt": "0.10.0",
     "postcss": "8.4.40",
     "sass": "1.77.8",
-    "terser": "5.31.3",
+    "terser": "5.31.4",
     "prettier": "^3.3.3"
   },
   "browserslist": [
